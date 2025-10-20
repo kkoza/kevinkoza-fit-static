@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6 Week Strength Foundation - Kevin Koza Fitness</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.8;
+            color: #2c2c2c;
+            background: #fafafa;
+        }
+
+        /* Navigation - Simple and Clean */
+        nav {
+            position: fixed;
+            width: 100%;
+            background: rgba(250, 250, 250, 0.98);
+            padding: 2rem 0;
+            z-index: 1000;
+            border-bottom: 1px solid #e8e8e8;
+        }
+
+        nav .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: #2c2c2c;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 3rem;
+        }
+
+        nav a {
+            color: #2c2c2c;
+            text-decoration: none;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 300;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.5;
+        }
+
+        /* Hero Section with Video */
+        .hero {
+            padding: 10rem 2rem 4rem 2rem;
+            text-align: center;
+            background: #fafafa;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+            color: #2c2c2c;
+            line-height: 1.2;
+            letter-spacing: -1px;
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            color: #666;
+            font-weight: 300;
+            margin-bottom: 3rem;
+            line-height: 1.8;
+        }
+
+        /* Video Container */
+        .video-container {
+            width: 100%;
+            max-width: 800px;
+            height: 450px;
+            margin: 0 auto 2rem auto;
+            background: #e8e8e8;
+            border: 1px solid #d0d0d0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 6rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #2c2c2c;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        .section-intro {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 4rem;
+            font-weight: 300;
+            line-height: 1.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        /* Program Overview */
+        .program-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .program-item {
+            border-bottom: 1px solid #e8e8e8;
+            padding-bottom: 2.5rem;
+        }
+
+        .program-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .program-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #2c2c2c;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .program-item p {
+            color: #666;
+            font-weight: 300;
+            line-height: 1.9;
+        }
+
+        /* Lead Magnet Section */
+        .lead-magnet {
+            background: #fff;
+            border-top: 1px solid #e8e8e8;
+            border-bottom: 1px solid #e8e8e8;
+            text-align: center;
+        }
+
+        .lead-magnet h2 {
+            font-size: 2rem;
+        }
+
+        .lead-magnet-form {
+            max-width: 500px;
+            margin: 3rem auto 0 auto;
+        }
+
+        .lead-magnet-form input {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #e8e8e8;
+            background: #fafafa;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+
+        .lead-magnet-form input:focus {
+            outline: none;
+            border-color: #2c2c2c;
+        }
+
+        .lead-magnet-form button {
+            width: 100%;
+            padding: 1rem;
+            background: #2c2c2c;
+            color: #fff;
+            border: none;
+            font-size: 0.95rem;
+            font-weight: 400;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: background 0.3s;
+            font-family: inherit;
+        }
+
+        .lead-magnet-form button:hover {
+            background: #000;
+        }
+
+        .lead-magnet-note {
+            font-size: 0.85rem;
+            color: #999;
+            margin-top: 1rem;
+            letter-spacing: 0.5px;
+        }
+
+        /* CTA Buttons */
+        .cta-link {
+            display: inline-block;
+            color: #2c2c2c;
+            text-decoration: none;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 400;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #2c2c2c;
+            transition: opacity 0.3s;
+        }
+
+        .cta-link:hover {
+            opacity: 0.5;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: #2c2c2c;
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 400;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: background 0.3s;
+            border: none;
+            font-family: inherit;
+        }
+
+        .cta-button:hover {
+            background: #000;
+        }
+
+        /* Conversion Section */
+        .conversion {
+            background: #fff;
+            border-top: 1px solid #e8e8e8;
+            border-bottom: 1px solid #e8e8e8;
+            text-align: center;
+        }
+
+        .conversion-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .conversion-option {
+            padding: 3rem 2rem;
+            border: 1px solid #e8e8e8;
+        }
+
+        .conversion-option h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #2c2c2c;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .conversion-option p {
+            color: #666;
+            margin-bottom: 2rem;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+
+        /* Calendly Section */
+        .calendly-section {
+            background: #fafafa;
+            padding: 6rem 2rem;
+        }
+
+        .calendly-section h2 {
+            margin-bottom: 3rem;
+        }
+
+        .calendly-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: #fff;
+            border-top: 1px solid #e8e8e8;
+            border-bottom: 1px solid #e8e8e8;
+        }
+
+        .testimonial-placeholder {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: #999;
+            font-style: italic;
+        }
+
+        /* FAQ Section */
+        .faq {
+            background: #fafafa;
+        }
+
+        .faq-list {
+            margin-top: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #e8e8e8;
+        }
+
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            padding: 1.5rem 0;
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            color: #2c2c2c;
+            font-weight: 400;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: inherit;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .faq-question:hover {
+            opacity: 0.7;
+        }
+
+        .faq-icon {
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+            font-weight: 300;
+        }
+
+        .faq-icon.active {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            color: #666;
+            font-weight: 300;
+            line-height: 1.9;
+        }
+
+        .faq-answer.active {
+            max-height: 1000px;
+            padding-bottom: 2rem;
+        }
+
+        .faq-answer ul {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .faq-answer li {
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+
+        .faq-answer li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+        }
+
+        /* Footer */
+        footer {
+            background: #fafafa;
+            text-align: center;
+            padding: 4rem 2rem;
+            border-top: 1px solid #e8e8e8;
+        }
+
+        footer p {
+            color: #999;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: #2c2c2c;
+            font-size: 1.5rem;
+            cursor: pointer;
+            font-weight: 300;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .video-container {
+                height: 250px;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            nav ul {
+                display: none;
+                position: fixed;
+                top: 90px;
+                left: 0;
+                right: 0;
+                background: #fafafa;
+                flex-direction: column;
+                padding: 2rem;
+                border-bottom: 1px solid #e8e8e8;
+                gap: 1.5rem;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            section {
+                padding: 4rem 1.5rem;
+            }
+
+            .conversion-options {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .faq-question {
+                font-size: 1rem;
+            }
+        }
+
+        /* Subtle animations */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">Kevin Koza Fitness</div>
+            <button class="menu-toggle">Menu</button>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#program">Program</a></li>
+                <li><a href="#enroll">Enroll</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Video -->
+    <section id="home" class="hero fade-in">
+        <div class="hero-content">
+            <h1>Build strength and confidence in 6 weeks</h1>
+            <p class="subtitle">A structured program for beginners ready to start their fitness journey with clarity and support</p>
+            
+            <!-- Video Placeholder -->
+            <div class="video-container">
+                Video Introduction
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Overview -->
+    <section id="program">
+        <h2>The 6 Week Foundation</h2>
+        <p class="section-intro">A video-based course with weekly lessons, guided workouts, and practical assignments designed to build sustainable fitness habits</p>
+        <div class="program-grid">
+            <div class="program-item">
+                <h3>Week 1-2: Building the Foundation</h3>
+                <p>Start with bodyweight exercises you can do anywhere. Learn fundamental movement patterns and begin establishing your exercise routine. By week two, we'll introduce equipment recommendations as you prepare for progressive overload.</p>
+            </div>
+            <div class="program-item">
+                <h3>Week 3-4: Adding Resistance</h3>
+                <p>Incorporate weighted exercises starting with a single kettlebell. Learn proper form, understand training principles, and develop the mindset needed for long-term consistency. These weeks focus on building both physical strength and mental resilience.</p>
+            </div>
+            <div class="program-item">
+                <h3>Week 5-6: Gym Confidence & Beyond</h3>
+                <p>Transition to gym training or continue progressing at home—your choice. Build familiarity with gym equipment, overcome any remaining anxiety, and walk away with a complete understanding of how to continue your fitness journey independently.</p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #e8e8e8;">
+            <p style="color: #666; font-weight: 300; margin-bottom: 1.5rem;">Each week includes fitness principles, mindset lessons, guided workouts, and actionable assignments</p>
+        </div>
+    </section>
+
+    <!-- Lead Magnet Section -->
+    <section class="lead-magnet">
+        <h2>Get Your Free Starter Guide</h2>
+        <p class="section-intro">Download our complete beginner's guide to strength training before you enroll</p>
+        <form class="lead-magnet-form" onsubmit="handleLeadMagnet(event)">
+            <input type="email" placeholder="Email address" required>
+            <button type="submit">Send me the guide</button>
+        </form>
+        <p class="lead-magnet-note">You'll also receive occasional training tips and program updates</p>
+    </section>
+
+    <!-- Conversion Section -->
+    <section id="enroll" class="conversion">
+        <h2>Ready to Start?</h2>
+        <p class="section-intro">Choose the path that works best for you</p>
+        <div class="conversion-options">
+            <div class="conversion-option">
+                <h3>Enroll Now</h3>
+                <p>Join the 6-week program immediately and get instant access to all materials and community support</p>
+                <a href="https://whop.com/your-product-link" class="cta-button" target="_blank">Join the Program</a>
+            </div>
+            <div class="conversion-option">
+                <h3>Schedule a Call</h3>
+                <p>Have questions? Book a free discovery call to discuss your goals and see if the program is right for you</p>
+                <a href="#calendly" class="cta-button" onclick="scrollToCalendly(); return false;">Book a Call</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calendly Section -->
+    <section id="calendly" class="calendly-section">
+        <h2>Schedule Your Discovery Call</h2>
+        <div class="calendly-container">
+            <!-- Calendly inline widget begin -->
+            <div class="calendly-inline-widget" data-url="https://calendly.com/kev-kevinkoza/flex-and-paint-discovery" style="min-width:320px;height:700px;"></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            <!-- Calendly inline widget end -->
+        </div>
+    </section>
+
+    <!-- Testimonials Section (Placeholder) -->
+    <section id="testimonials" class="testimonials">
+        <h2>What Members Say</h2>
+        <div class="testimonial-placeholder">
+            Testimonials coming soon
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>Who is this for?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Do you want to start building muscle, but you don't know where to begin?</p>
+                    <p>Maybe you have some familiarity with exercise, but you want a structured routine which shows you exactly what to do to make progress.</p>
+                    <p>Maybe you'd like to get started with fitness, but you have some anxiety around the gym and you haven't solidified the foundational habits to exercise.</p>
+                    <p>Whether you want to find the right way to work out at home, or you'd like to build confidence in the gym, this course is for you.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>What are the outcomes?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Over 6 weeks, you will:</p>
+                    <ul>
+                        <li>Learn a muscle-building at-home routine which you can optionally extend into the gym.</li>
+                        <li>Shift your identity towards being a person who prioritizes fitness and align your actions with that identity.</li>
+                        <li>Walk away with the mindset that exercise is not intimidating, and is inherently rewarding, for both the act itself and the long-term health outcomes.</li>
+                        <li>Learn the strategies to tap into your motivations, build consistency, and leverage momentum in your fitness practice.</li>
+                        <li>Understand key weight training principles which you can use to extend your fitness practice.</li>
+                        <li>Build familiarity and confidence in the gym.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Kevin Koza Fitness. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // FAQ Toggle
+        function toggleFaq(button) {
+            const answer = button.nextElementSibling;
+            const icon = button.querySelector('.faq-icon');
+            
+            // Close all other FAQs
+            document.querySelectorAll('.faq-answer').forEach(item => {
+                if (item !== answer) {
+                    item.classList.remove('active');
+                }
+            });
+            document.querySelectorAll('.faq-icon').forEach(item => {
+                if (item !== icon) {
+                    item.classList.remove('active');
+                }
+            });
+            
+            // Toggle current FAQ
+            answer.classList.toggle('active');
+            icon.classList.toggle('active');
+        }
+
+        // Scroll to Calendly
+        function scrollToCalendly() {
+            document.getElementById('calendly').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+
+        // Handle lead magnet download
+        function handleLeadMagnet(event) {
+            event.preventDefault();
+            const email = event.target.querySelector('input[type="email"]').value;
+            
+            // This is where ConvertKit form will be integrated
+            alert(`Thank you! Check ${email} for your free starter guide.`);
+            event.target.reset();
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && !this.hasAttribute('onclick')) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            const nav = document.querySelector('nav ul');
+            nav.classList.toggle('active');
+        });
+
+        // Close mobile menu when link clicked
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function() {
+                const nav = document.querySelector('nav ul');
+                nav.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
