@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sustainable Fitness - Kevin Koza</title>
+    <title>90-Day Transformation Coaching - Kevin Koza</title>
     <style>
         * {
             margin: 0;
@@ -65,7 +65,382 @@
             opacity: 0.5;
         }
 
-        /* FAQ Styles */
+        /* Hero Section */
+        .hero {
+            padding: 10rem 2rem 4rem 2rem;
+            text-align: center;
+            background: #fafafa;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+            color: #2c2c2c;
+            line-height: 1.2;
+            letter-spacing: -1px;
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            color: #666;
+            font-weight: 300;
+            margin-bottom: 3rem;
+            line-height: 1.8;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 6rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #2c2c2c;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #2c2c2c;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .section-intro {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 4rem;
+            font-weight: 300;
+            line-height: 1.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        /* Social Proof Quote */
+        .social-proof-quick {
+            background: #fff;
+            border-top: 1px solid #e8e8e8;
+            border-bottom: 1px solid #e8e8e8;
+            text-align: center;
+        }
+
+        .quote {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.3rem;
+            color: #666;
+            font-weight: 300;
+            line-height: 1.8;
+            font-style: italic;
+            padding: 2rem;
+            border-left: 3px solid #2c2c2c;
+            background: #fafafa;
+        }
+
+        .quote-author {
+            margin-top: 1.5rem;
+            font-size: 1rem;
+            color: #2c2c2c;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-style: normal;
+        }
+
+        /* Problem/Solution */
+        .problem-list {
+            list-style: none;
+            max-width: 700px;
+            margin: 3rem auto;
+            text-align: left;
+        }
+
+        .problem-list li {
+            padding: 1rem 0;
+            padding-left: 2rem;
+            border-bottom: 1px solid #e8e8e8;
+            color: #666;
+            font-weight: 300;
+            line-height: 1.8;
+            position: relative;
+        }
+
+        .problem-list li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #2c2c2c;
+            font-weight: 400;
+        }
+
+        .problem-list li:last-child {
+            border-bottom: none;
+        }
+
+        .closing-statement {
+            margin-top: 3rem;
+            font-size: 1.2rem;
+            color: #666;
+            font-weight: 300;
+            line-height: 1.9;
+            text-align: center;
+            font-style: italic;
+        }
+
+        /* Program Breakdown */
+        .program-phase {
+            margin-bottom: 3rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid #e8e8e8;
+        }
+
+        .program-phase:last-child {
+            border-bottom: none;
+        }
+
+        .program-phase h3 {
+            text-align: left;
+        }
+
+        .program-phase ul {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .program-phase li {
+            padding: 0.75rem 0;
+            padding-left: 2rem;
+            color: #666;
+            font-weight: 300;
+            line-height: 1.8;
+            position: relative;
+        }
+
+        .program-phase li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #2c2c2c;
+        }
+
+        .program-outcome {
+            margin-top: 3rem;
+            padding: 2rem;
+            background: #fafafa;
+            border-left: 3px solid #2c2c2c;
+            font-size: 1.1rem;
+            color: #666;
+            font-weight: 300;
+            line-height: 1.9;
+        }
+
+        /* Value Stack */
+        .value-stack {
+            background: #fff;
+            padding: 3rem;
+            border: 2px solid #2c2c2c;
+            max-width: 700px;
+            margin: 3rem auto;
+        }
+
+        .value-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 0;
+            border-bottom: 1px solid #e8e8e8;
+            color: #666;
+            font-weight: 300;
+        }
+
+        .value-item:last-child {
+            border-bottom: none;
+            font-weight: 400;
+            color: #2c2c2c;
+            font-size: 1.2rem;
+            margin-top: 1rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid #2c2c2c;
+        }
+
+        .value-amount {
+            color: #2c2c2c;
+            font-weight: 400;
+        }
+
+        .bonus-section {
+            background: #fafafa;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .bonus-section h4 {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            color: #2c2c2c;
+        }
+
+        .bonus-item {
+            padding: 0.75rem 0;
+            color: #666;
+            font-weight: 300;
+        }
+
+        /* Guarantee Box */
+        .guarantee-box {
+            background: #fafafa;
+            border: 2px solid #2c2c2c;
+            padding: 3rem;
+            max-width: 700px;
+            margin: 3rem auto;
+            text-align: center;
+        }
+
+        .guarantee-box h3 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .guarantee-box p {
+            font-size: 1.1rem;
+            color: #666;
+            font-weight: 300;
+            line-height: 1.9;
+        }
+
+        /* Pricing Section */
+        .pricing-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            max-width: 700px;
+            margin: 3rem auto;
+        }
+
+        .pricing-card {
+            padding: 3rem 2rem;
+            border: 2px solid #e8e8e8;
+            text-align: center;
+            transition: border-color 0.3s;
+        }
+
+        .pricing-card:hover {
+            border-color: #2c2c2c;
+        }
+
+        .price {
+            font-size: 2.5rem;
+            color: #2c2c2c;
+            font-weight: 300;
+            margin: 1rem 0;
+        }
+
+        .price-label {
+            font-size: 0.9rem;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .savings {
+            background: #2c2c2c;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        .scarcity-notice {
+            background: #2c2c2c;
+            color: #fff;
+            padding: 1.5rem;
+            text-align: center;
+            margin: 2rem auto;
+            max-width: 700px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: #2c2c2c;
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 400;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: background 0.3s;
+            border: none;
+            font-family: inherit;
+        }
+
+        .cta-button:hover {
+            background: #000;
+        }
+
+        .cta-button.secondary {
+            background: #fff;
+            color: #2c2c2c;
+            border: 1px solid #2c2c2c;
+        }
+
+        .cta-button.secondary:hover {
+            background: #2c2c2c;
+            color: #fff;
+        }
+
+        /* Lead Magnet */
+        .lead-magnet {
+            background: #fff;
+            border-top: 1px solid #e8e8e8;
+            border-bottom: 1px solid #e8e8e8;
+            text-align: center;
+        }
+
+        .lead-magnet h2 {
+            font-size: 2rem;
+        }
+
+        .lead-magnet-note {
+            font-size: 0.85rem;
+            color: #999;
+            margin-top: 1rem;
+            letter-spacing: 0.5px;
+        }
+
+        /* FAQ */
         .faq-item {
             margin-bottom: 1.5rem;
             border-bottom: 1px solid #e8e8e8;
@@ -118,142 +493,21 @@
             padding-bottom: 2rem;
         }
 
-        /* Hero Section */
-        .hero {
-            padding: 10rem 2rem 4rem 2rem;
-            text-align: center;
+        /* Testimonials */
+        .testimonial-full {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 3rem;
             background: #fafafa;
+            border-left: 3px solid #2c2c2c;
         }
 
-        .hero-content {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: 300;
-            margin-bottom: 1.5rem;
-            color: #2c2c2c;
-            line-height: 1.2;
-            letter-spacing: -1px;
-        }
-
-        .hero .subtitle {
-            font-size: 1.3rem;
-            color: #666;
-            font-weight: 300;
-            margin-bottom: 3rem;
-            line-height: 1.8;
-        }
-
-        /* Section Styles */
-        section {
-            padding: 6rem 2rem;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            color: #2c2c2c;
-            font-weight: 300;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            text-align: center;
-        }
-
-        .section-intro {
+        .testimonial-full p {
             font-size: 1.1rem;
             color: #666;
-            margin-bottom: 4rem;
             font-weight: 300;
             line-height: 1.9;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            text-align: center;
-        }
-
-        /* Lead Magnet */
-        .lead-magnet {
-            background: #fff;
-            border-top: 1px solid #e8e8e8;
-            border-bottom: 1px solid #e8e8e8;
-            text-align: center;
-        }
-
-        .lead-magnet h2 {
-            font-size: 2rem;
-        }
-
-        .lead-magnet-form {
-            max-width: 500px;
-            margin: 3rem auto 0 auto;
-        }
-
-        .lead-magnet-form input {
-            width: 100%;
-            padding: 1rem;
-            border: 1px solid #e8e8e8;
-            background: #fafafa;
-            font-size: 1rem;
-            margin-bottom: 1rem;
-            font-family: inherit;
-            transition: border-color 0.3s;
-        }
-
-        .lead-magnet-form input:focus {
-            outline: none;
-            border-color: #2c2c2c;
-        }
-
-        .lead-magnet-form button {
-            width: 100%;
-            padding: 1rem;
-            background: #2c2c2c;
-            color: #fff;
-            border: none;
-            font-size: 0.95rem;
-            font-weight: 400;
-            cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            transition: background 0.3s;
-            font-family: inherit;
-        }
-
-        .lead-magnet-form button:hover {
-            background: #000;
-        }
-
-        .lead-magnet-note {
-            font-size: 0.85rem;
-            color: #999;
-            margin-top: 1rem;
-            letter-spacing: 0.5px;
-        }
-
-        /* CTA Button */
-        .cta-button {
-            display: inline-block;
-            padding: 1.2rem 3rem;
-            background: #2c2c2c;
-            color: #fff;
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 400;
-            cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            transition: background 0.3s;
-            border: none;
-            font-family: inherit;
-        }
-
-        .cta-button:hover {
-            background: #000;
+            margin-bottom: 1.5rem;
         }
 
         /* Footer */
@@ -280,6 +534,29 @@
             font-size: 1.5rem;
             cursor: pointer;
             font-weight: 300;
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .fade-in-content {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .fade-in-content.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         /* Responsive */
@@ -321,21 +598,16 @@
                 padding: 4rem 1.5rem;
             }
 
-            .coaching-grid {
-                grid-template-columns: 1fr !important;
-                gap: 2rem !important;
+            .pricing-options {
+                grid-template-columns: 1fr;
             }
-        }
 
-        /* Animations */
-        .fade-in {
-            opacity: 0;
-            animation: fadeIn 1s ease-in forwards;
-        }
+            .hero-ctas {
+                flex-direction: column;
+            }
 
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
+            .faq-question {
+                font-size: 1rem;
             }
         }
     </style>
@@ -344,14 +616,13 @@
     <!-- Navigation -->
     <nav>
         <div class="container">
-            <div class="logo">Kevin Koza Fitness</div>
+            <div class="logo">Kevin Koza</div>
             <button class="menu-toggle">Menu</button>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#program">Program</a></li>
-                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#faq">FAQ</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
             </ul>
         </div>
     </nav>
@@ -359,111 +630,352 @@
     <!-- Hero Section -->
     <section id="home" class="hero fade-in">
         <div class="hero-content">
-            <h1>Sustainable Fitness</h1>
-            <p class="subtitle">Learn how to build strength and confidence in the gym and yourself. Lose fat, build muscle, and develop strategies to stay consistent with your fitness practice.</p>
+            <h1>You Don't Need Another Program. You Need A Coach.</h1>
+            <p class="subtitle">You know what to do. You've read the articles, saved the workout plans, watched the YouTube videos.<br><br>But you're still not where you want to be.<br><br>What's missing? Someone in your corner. Daily. Actually invested in your success.</p>
+            <div class="hero-ctas">
+                <a href="#apply" class="cta-button">Schedule Your Strategy Call</a>
+                <a href="#leadmagnet" class="cta-button secondary">Get My Free Training Framework</a>
+            </div>
         </div>
     </section>
 
-    <!-- Apply for Coaching Section -->
-    <section style="background: #fff; border-top: 1px solid #e8e8e8; border-bottom: 1px solid #e8e8e8; text-align: center;">
-        <h2>Apply for Coaching</h2>
+    <!-- Social Proof Quick -->
+    <section class="social-proof-quick fade-in-content">
+        <div class="quote">
+            "It's good having a cheerleader in a way. It makes me feel a lot more confident, and getting that mobility back is important. And you're easy to talk to—that's the nice thing."
+            <div class="quote-author">— Tom, Transforming His Health</div>
+        </div>
+    </section>
+
+    <!-- The Problem -->
+    <section class="fade-in-content">
+        <h2>Here's The Real Problem</h2>
+        <p class="section-intro">Information isn't the issue. You already know you should lift heavy, eat enough protein, and be consistent. The internet gave you all that for free.<br><br>What you're missing:</p>
         
-        <div class="coaching-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; max-width: 800px; margin: 3rem auto 0;">
-            <div style="padding: 3rem 2rem; border: 1px solid #e8e8e8;">
-                <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: #2c2c2c; font-weight: 400; text-transform: uppercase; letter-spacing: 1.5px;">Schedule a Call</h3>
-                <p style="color: #666; margin-bottom: 2rem; font-weight: 300; line-height: 1.8;">Let's hop on a call to discuss your fitness journey and see if there's alignment for coaching.</p>
-                <a href="https://calendly.com/kev-kevinkoza/30min" class="cta-button" target="_blank">Book Discovery Call</a>
-            </div>
-            <div style="padding: 3rem 2rem; border: 1px solid #e8e8e8;">
-                <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: #2c2c2c; font-weight: 400; text-transform: uppercase; letter-spacing: 1.5px;">Enroll in Coaching</h3>
-                <p style="color: #666; margin-bottom: 2rem; font-weight: 300; line-height: 1.8;">1:1 coaching for 90 days. Individual plans, community support, weekly check-ins, and more.</p>
-                <a href="https://www.kevinkoza.com/packages" class="cta-button" target="_blank">Start Now</a>
-            </div>
-        </div>
+        <ul class="problem-list">
+            <li>Someone who actually knows YOUR body, YOUR schedule, YOUR life</li>
+            <li>Accountability on the days you don't feel like showing up</li>
+            <li>A second set of eyes to catch form issues before they become injuries</li>
+            <li>The confidence to walk into any gym and know exactly what to do</li>
+        </ul>
+
+        <p class="closing-statement">A PDF can't text you at 6am. A YouTube video can't adjust your program when life gets messy. A Reddit thread can't celebrate your PRs with you.<br><br>You need a real person. That's what this is.</p>
     </section>
 
-    <!-- 90 Day Program Details -->
-    <section id="program" style="background: #fafafa; padding: 6rem 2rem;">
-        <div style="max-width: 700px; margin: 0 auto;">
-            <h2 style="margin-bottom: 2rem;">90 Day Transformation</h2>
-            <p style="font-size: 1.1rem; color: #666; font-weight: 300; line-height: 1.9; margin-bottom: 2rem;">Transform your body through this 90 day program, focused on building skills in the weight room to add muscle mass and decrease body fat.</p>
-            <p style="font-size: 1.1rem; color: #666; font-weight: 300; line-height: 1.9; margin-bottom: 2rem;">At the start of your program, I'll tailor an individual exercise program to meet your goals, considering available equipment and time constraints.</p>
-            <p style="font-size: 1.1rem; color: #666; font-weight: 300; line-height: 1.9; margin-bottom: 3rem;">We will go over this program on our first call to clarify next steps.</p>
-            
-            <h3 style="font-size: 1.3rem; margin-bottom: 1.5rem; color: #2c2c2c; font-weight: 400; text-transform: uppercase; letter-spacing: 1.5px; text-align: left;">Over the next 90 days, you will have:</h3>
-            <ul style="list-style: none; text-align: left;">
-                <li style="padding: 1rem 0; border-bottom: 1px solid #e8e8e8; color: #666; font-weight: 300; line-height: 1.8;">An individualized, adaptable program to build muscle</li>
-                <li style="padding: 1rem 0; border-bottom: 1px solid #e8e8e8; color: #666; font-weight: 300; line-height: 1.8;">One system to track your workouts, diet, and lifestyle factors which contribute to your fitness</li>
-                <li style="padding: 1rem 0; border-bottom: 1px solid #e8e8e8; color: #666; font-weight: 300; line-height: 1.8;">Daily text reminders and support</li>
-                <li style="padding: 1rem 0; border-bottom: 1px solid #e8e8e8; color: #666; font-weight: 300; line-height: 1.8;">Community support through Discord</li>
-                <li style="padding: 1rem 0; color: #666; font-weight: 300; line-height: 1.8;">Weekly 30-minute calls to address questions, fix what's not working, and hone in on strategies to make the gym <em>fun</em>.</li>
+    <!-- Video Introduction -->
+    <section class="fade-in-content" style="background: #fff; border-top: 1px solid #e8e8e8; border-bottom: 1px solid #e8e8e8;">
+        <h2>Why Work With Me?</h2>
+        <p class="section-intro">I'm not just another fitness influencer selling you a dream. I'm a former software engineer who approaches training like a system—deliberate, logical, and built to last.<br><br>Watch this quick intro to see if we're a good fit:</p>
+        
+        <div style="max-width: 800px; margin: 3rem auto;">
+            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: #000;">
+                <iframe 
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+                    src="https://www.youtube.com/embed/l7-u1DyamIg" 
+                    title="Why Work With Me - Kevin Koza" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <p style="text-align: center; font-size: 1.1rem; color: #666; font-weight: 300; line-height: 1.9; max-width: 700px; margin: 2rem auto 0 auto;">My goal isn't to keep you as a client forever. It's to make you independent—someone who understands their body, enjoys the process, and doesn't need a coach after 90 days.</p>
+    </section>
+
+    <!-- The Solution: 90-Day Program -->
+    <section id="program" class="fade-in-content" style="background: #fff; border-top: 1px solid #e8e8e8; border-bottom: 1px solid #e8e8e8;">
+        <h2>How This Works: 90 Days Together</h2>
+        <p class="section-intro">No fluff. No "secret methods." Just deliberate, consistent work with someone who's actually paying attention.</p>
+
+        <div class="program-phase">
+            <h3>Month 1: Build The Foundation</h3>
+            <ul>
+                <li>Custom program built around your goals, equipment, and schedule</li>
+                <li>Daily text check-ins to build the habit (I respond to everything)</li>
+                <li>Weekly 30-min calls to troubleshoot and adjust</li>
+                <li>Private Discord access for questions and community support</li>
             </ul>
         </div>
+
+        <div class="program-phase">
+            <h3>Month 2: Build Momentum</h3>
+            <ul>
+                <li>Progressive overload based on YOUR actual progress (not a template)</li>
+                <li>Form videos reviewed so you're lifting safely and effectively</li>
+                <li>Nutrition tweaks that fit your lifestyle (no meal prep guilt trips)</li>
+                <li>You start to feel like you know what you're doing</li>
+            </ul>
+        </div>
+
+        <div class="program-phase">
+            <h3>Month 3: Build Independence</h3>
+            <ul>
+                <li>You learn the WHY behind everything (programming principles, not just exercises)</li>
+                <li>Strategies to maintain results without a coach</li>
+                <li>Final assessment and your roadmap for continued growth</li>
+                <li>You graduate confident, capable, and independent</li>
+            </ul>
+        </div>
+
+        <div class="program-outcome">
+            The goal: You walk away with a better body AND the knowledge to never need another coach again.
+        </div>
     </section>
 
-    <!-- Calendly Embed Section -->
-    <section id="schedule" style="background: #fafafa; padding: 6rem 2rem; border-top: 1px solid #e8e8e8;">
-        <div style="max-width: 900px; margin: 0 auto;">
-            <h2 style="margin-bottom: 3rem;">Schedule Your Discovery Call</h2>
+    <!-- Value Stack -->
+    <section class="fade-in-content">
+        <h2>The Complete Package</h2>
+        
+        <div class="value-stack">
+            <div class="value-item">
+                <span>Custom training program</span>
+                <span class="value-amount">$500 value</span>
+            </div>
+            <div class="value-item">
+                <span>12 weekly 1:1 calls (12+ hours)</span>
+                <span class="value-amount">$1,200 value</span>
+            </div>
+            <div class="value-item">
+                <span>Daily text accountability</span>
+                <span class="value-amount">$450 value</span>
+            </div>
+            <div class="value-item">
+                <span>Form check videos</span>
+                <span class="value-amount">Priceless</span>
+            </div>
+            <div class="value-item">
+                <span>Private Discord community</span>
+                <span class="value-amount">$97 value</span>
+            </div>
+            <div class="value-item">
+                <span>Nutrition guidance</span>
+                <span class="value-amount">$300 value</span>
+            </div>
+            <div class="value-item">
+                <span>Total Value</span>
+                <span class="value-amount">$2,547</span>
+            </div>
+
+            <div class="bonus-section">
+                <h4>Bonuses Included:</h4>
+                <div class="bonus-item">✓ Complete exercise library with video demos ($97 value)</div>
+                <div class="bonus-item">✓ Post-Program Maintenance Guide ($47 value)</div>
+                <div class="bonus-item">✓ Lifetime Discord community access ($297 value)</div>
+            </div>
+
+            <div class="value-item">
+                <span>Your Investment</span>
+                <span class="value-amount">$999</span>
+            </div>
+        </div>
+
+        <p style="text-align: center; font-size: 1.2rem; color: #2c2c2c; margin-top: 2rem;">You Save: $1,989 (67% off)</p>
+    </section>
+
+    <!-- Guarantee -->
+    <section class="fade-in-content" style="background: #fafafa;">
+        <div class="guarantee-box">
+            <h3>My 30-Day Promise</h3>
+            <p>Work with me for 30 days. If you're not making progress, don't feel supported, or just don't vibe with my approach—I'll refund your first month completely.</p>
+            <p style="margin-top: 1.5rem; font-weight: 400;">I'm confident this works because I show up. If you show up too, you'll see results. If not, you get your money back. Simple.</p>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="fade-in-content">
+        <h2>Investment: $999 for 90 Days</h2>
+        
+        <div class="pricing-options">
+            <div class="pricing-card">
+                <p class="price-label">Pay in Full</p>
+                <div class="price">$999</div>
+                <p style="color: #666; margin-bottom: 1.5rem;">One-time payment</p>
+                <span class="savings">Save $100</span>
+            </div>
+            <div class="pricing-card">
+                <p class="price-label">Payment Plan</p>
+                <div class="price">$333<span style="font-size: 1.5rem;">/mo</span></div>
+                <p style="color: #666; margin-bottom: 1.5rem;">For 3 months</p>
+                <p style="color: #999; font-size: 0.9rem;">Total: $1,099</p>
+            </div>
+        </div>
+
+        <div style="max-width: 700px; margin: 3rem auto; padding: 2rem; background: #fafafa; text-align: left;">
+            <h3 style="margin-bottom: 1.5rem; text-align: left;">Let's Be Honest About The Money:</h3>
+            <p style="margin-bottom: 1.5rem; font-size: 1.1rem; color: #666; font-weight: 300; line-height: 1.9;">$333/month is not cheap. But compare it to:</p>
+            <ul class="problem-list">
+                <li>Gym membership ($50/mo) + random online programs ($100) = $450 over 3 months with zero accountability</li>
+                <li>Most personal trainers: $75-150 per session, twice a week = $1,800-3,600 for 3 months</li>
+                <li>This: Daily access to me, 12 coaching calls, custom programming, form checks, and you learn the principles = $999</li>
+            </ul>
+            <p style="margin-top: 2rem; font-size: 1.1rem; color: #666; font-weight: 300; line-height: 1.9;">You're not paying for a program. You're paying for me to give a shit about your progress every single day for 90 days.</p>
+        </div>
+
+        <div class="scarcity-notice">
+            Current Availability: 3 Spots | Next Cohort Starts January 2025
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="#apply" class="cta-button">Schedule Your Strategy Call</a>
+        </div>
+    </section>
+
+    <!-- Apply / Schedule Call -->
+    <section id="apply" class="fade-in-content" style="background: #fff; border-top: 1px solid #e8e8e8; border-bottom: 1px solid #e8e8e8; text-align: center;">
+        <h2>Book Your Free Strategy Call</h2>
+        <p class="section-intro">30 minutes. No commitment. We'll talk about where you are, where you want to be, and whether we're a good fit to work together.<br><br>If it makes sense, great. If not, no hard feelings—I'll point you in the right direction anyway.</p>
+        
+        <div style="max-width: 900px; margin: 3rem auto;">
             <div class="calendly-inline-widget" data-url="https://calendly.com/kev-kevinkoza/30min" style="min-width:320px;height:700px;"></div>
             <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section id="faq" style="background: #fff; padding: 6rem 2rem; border-top: 1px solid #e8e8e8; border-bottom: 1px solid #e8e8e8;">
-        <div style="max-width: 700px; margin: 0 auto;">
-            <h2 style="margin-bottom: 3rem;">Frequently Asked Questions</h2>
+    <!-- Lead Magnet with ConvertKit Form -->
+    <section id="leadmagnet" class="lead-magnet fade-in-content">
+        <h2>Not Ready Yet? Start Here.</h2>
+        <p class="section-intro">Get my 22-page training framework—the same principles I teach my coaching clients. Progressive overload, program design, recovery strategies, and how to actually build muscle long-term.<br><br>No fluff. No "secrets." Just what works.</p>
+        
+        <!-- ConvertKit Form -->
+        <div style="max-width: 500px; margin: 3rem auto 0 auto;">
+            <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
+            <form action="https://app.kit.com/forms/8687265/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="8687265" data-uid="d962aa691d" data-format="inline" data-version="5" data-options='{"settings":{"after_subscribe":{"action":"message","success_message":"Success! Now check your email to confirm your subscription.","redirect_url":""},"analytics":{"google":null,"fathom":null,"facebook":null,"segment":null,"pinterest":null,"sparkloop":null,"googletagmanager":null},"modal":{"trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"powered_by":{"show":true,"url":"https://kit.com/features/forms?utm_campaign=poweredby&utm_content=form&utm_medium=referral&utm_source=dynamic"},"recaptcha":{"enabled":true},"return_visitor":{"action":"show","custom_content":""},"slide_in":{"display_in":"bottom_right","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"sticky_bar":{"display_in":"top","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15}},"version":"5"}' min-width="400 500 600 700 800">
+                <div data-style="clean">
+                    <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
+                    <div data-element="fields" data-stacked="false" class="seva-fields formkit-fields">
+                        <div class="formkit-field">
+                            <input class="formkit-input" name="email_address" aria-label="Email Address" placeholder="Email Address" required="" type="email" style="color: rgb(44, 44, 44); border-color: rgb(232, 232, 232); border-radius: 0px; font-weight: 300; background: #fafafa; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 1rem; padding: 1rem;">
+                        </div>
+                        <button data-element="submit" class="formkit-submit formkit-submit" style="color: rgb(255, 255, 255); background-color: rgb(44, 44, 44); border-radius: 0px; font-weight: 400; text-transform: uppercase; letter-spacing: 2px; padding: 1rem 3rem; font-size: 0.95rem; width: 100%; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin-top: 1rem;">
+                            <div class="formkit-spinner"><div></div><div></div><div></div></div>
+                            <span class="">Send Me The Framework</span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+        <p class="lead-magnet-note">Plus weekly training tips. No spam, ever.</p>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="fade-in-content" style="background: #fff; border-top: 1px solid #e8e8e8; border-bottom: 1px solid #e8e8e8;">
+        <h2>Questions You Probably Have</h2>
+        <div style="max-width: 700px; margin: 3rem auto;">
             <div class="faq-item">
                 <button class="faq-question" onclick="toggleFaq(this)">
-                    <span>Who is this for?</span>
+                    <span>Is this actually worth $999?</span>
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-answer">
-                    <p>My programs are for beginners and early-intermediate lifters who want to stop spinning wheels in the gym and build foundational habits that last a lifetime.</p>
+                    <p>Honest answer: If you're the type who needs daily accountability and someone who actually knows your situation, yes. If you're self-motivated and just need a plan, probably not—save your money and grab the free PDF below. This is for people who know they need someone in their corner pushing them when motivation fades.</p>
                 </div>
             </div>
             <div class="faq-item">
                 <button class="faq-question" onclick="toggleFaq(this)">
-                    <span>Muscle-building, guaranteed?</span>
+                    <span>What if I can't commit to 90 days?</span>
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-answer">
-                    <p>If for any reason you're dissatisfied with your transformation, or you just don't enjoy working together, I'll send you a full refund. I'm confident that we will achieve your goals and enjoy the path towards sustainable fitness together.</p>
+                    <p>Life happens. Miss a workout? We adjust. Can't make a call? We reschedule. The only rule: be honest with me about what's going on. I can work with "I'm struggling this week" but not with ghosting. Show up imperfectly, not perfectly. That's all I ask.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>Can I do this without a gym membership?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>If you have dumbbells, kettlebells, or bands at home, we can make it work. But I'll be real with you: a gym gives us way more options. If budget is tight, most gyms are $10-30/month. Planet Fitness is literally $10. That's worth it for better results.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>What makes you different from other coaches?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Three things: (1) I'm a former software engineer—I think in systems, not bro-science. (2) My goal is to make the gym enjoyable, not just tolerable. If you hate every workout, you'll quit. (3) I'm teaching you to be independent. After 90 days, you shouldn't need me. That's success.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>What if I don't see results?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>If you follow the program for 30 days—showing up to workouts, staying in touch, being honest about nutrition—and you're not seeing progress? I'll refund your first month. No argument. But I've never had someone follow through consistently and not see results. Consistency is the secret.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" style="background: #fff; padding: 6rem 2rem; border-top: 1px solid #e8e8e8; border-bottom: 1px solid #e8e8e8;">
-        <div style="max-width: 700px; margin: 0 auto;">
-            <h2 style="margin-bottom: 3rem;">What Clients Say</h2>
-            <div style="padding: 3rem; background: #fafafa; border-left: 3px solid #2c2c2c;">
-                <p style="font-size: 1.1rem; color: #666; font-weight: 300; line-height: 1.9; margin-bottom: 1.5rem;">I opted to quit drinking and try to get my health better so that I could slide into my 70's being healthy. I'm in pretty good shape health-wise, so I just felt that I wanted to give that a go.</p>
-                <p style="font-size: 1.1rem; color: #666; font-weight: 300; line-height: 1.9; margin-bottom: 1.5rem;">The internet is kind of a vast wasteland of people's opinions on what to do—you know, watching you and your fitness journey, I thought, "well, I'd reach out to you" and see what your thoughts were and that's what I did. You've been able to provide a good "menu" of exercises that I think are staples and I can pick and choose. I try to keep my five, at least a day, based on what time I have. I think it's real convenient and I've gotten used to them and not necessarily having to sit there and check them off—I know what I need to do.</p>
-                <p style="font-size: 1.1rem; color: #666; font-weight: 300; line-height: 1.9; margin-bottom: 1.5rem;">It's been good. It's good having a cheerleader in a way— you know, that's what's one thing nice about a trainer, they're there to support you.</p>
-                <p style="font-size: 1.1rem; color: #666; font-weight: 300; line-height: 1.9; margin-bottom: 1.5rem;">It feels good, you know. It makes me feel a lot more confident so that's a nice thing. And then, you know, going along with that, the stretching has been good. It definitely helped get the mobility—certainly I haven't done anything in a long time. Getting that mobility back is important.</p>
-                <p style="font-size: 1.1rem; color: #666; font-weight: 300; line-height: 1.9; margin-bottom: 1.5rem;">I think the time we meet together has been good because we've been able to go over everything and pick out new things. Early on, being able to modify the workout program to what I was feeling and what you were sensing. That was good, I appreciate it, I like it. And you're easy to talk to—that's the nice thing. I think you could connect with a lot of people, especially since you're doing social media. To keep the flow going—I think you do that well.</p>
-                <p style="font-size: 1rem; color: #2c2c2c; font-weight: 400; text-transform: uppercase; letter-spacing: 1px; margin-top: 2rem;">— Tom, Fitness Enthusiast</p>
-            </div>
+    <!-- Full Testimonial -->
+    <section class="fade-in-content" style="background: #fafafa;">
+        <h2>What Clients Say</h2>
+        <div class="testimonial-full">
+            <p>I opted to quit drinking and try to get my health better so that I could slide into my 70's being healthy. I'm in pretty good shape health-wise, so I just felt that I wanted to give that a go.</p>
+            <p>The internet is kind of a vast wasteland of people's opinions on what to do—you know, watching you and your fitness journey, I thought, "well, I'd reach out to you" and see what your thoughts were and that's what I did. You've been able to provide a good "menu" of exercises that I think are staples and I can pick and choose. I try to keep my five, at least a day, based on what time I have. I think it's real convenient and I've gotten used to them and not necessarily having to sit there and check them off—I know what I need to do.</p>
+            <p>It's been good. It's good having a cheerleader in a way— you know, that's what's one thing nice about a trainer, they're there to support you.</p>
+            <p>It feels good, you know. It makes me feel a lot more confident so that's a nice thing. And then, you know, going along with that, the stretching has been good. It definitely helped get the mobility—certainly I haven't done anything in a long time. Getting that mobility back is important.</p>
+            <p>I think the time we meet together has been good because we've been able to go over everything and pick out new things. Early on, being able to modify the workout program to what I was feeling and what you were sensing. That was good, I appreciate it, I like it. And you're easy to talk to—that's the nice thing. I think you could connect with a lot of people, especially since you're doing social media. To keep the flow going—I think you do that well.</p>
+            <p class="quote-author">— Tom, Fitness Enthusiast</p>
         </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="fade-in-content" style="text-align: center; background: #fff; border-top: 1px solid #e8e8e8; border-bottom: 1px solid #e8e8e8;">
+        <h2>Ready? Let's Talk.</h2>
+        <p class="section-intro">I've got 3 spots open for January 2025. Book a free 30-minute strategy call. We'll talk about where you're at, where you want to go, and whether we're a good fit.<br><br>No pressure. No sales pitch. Just an honest conversation.</p>
+        <a href="#apply" class="cta-button">Schedule Your Strategy Call</a>
     </section>
 
     <!-- Footer -->
     <footer>
-    <footer>
-        <p>&copy; 2025 Kevin Koza Fitness. All rights reserved.</p>
+        <p>&copy; 2025 Kevin Koza</p>
     </footer>
 
     <script>
-        // Handle lead magnet download
-        function handleLeadMagnet(event) {
-            event.preventDefault();
-            const email = event.target.querySelector('input[type="email"]').value;
-            alert(`Thank you! Check ${email} for your free Week 1 guide.`);
-            event.target.reset();
+        // FAQ Toggle
+        function toggleFaq(button) {
+            const answer = button.nextElementSibling;
+            const icon = button.querySelector('.faq-icon');
+            
+            document.querySelectorAll('.faq-answer').forEach(item => {
+                if (item !== answer) {
+                    item.classList.remove('active');
+                }
+            });
+            document.querySelectorAll('.faq-icon').forEach(item => {
+                if (item !== icon) {
+                    item.classList.remove('active');
+                }
+            });
+            
+            answer.classList.toggle('active');
+            icon.classList.toggle('active');
         }
+
+        // Fade-in content on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.fade-in-content').forEach(el => {
+                observer.observe(el);
+            });
+        });
 
         // Mobile menu toggle
         document.querySelector('.menu-toggle').addEventListener('click', function() {
