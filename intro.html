@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Six Weeks to Sustainable Fitness - Kevin Koza</title>
+    <title>6-Week Gym Confidence Program - Kevin Koza</title>
     <style>
         * {
             margin: 0;
@@ -94,6 +94,13 @@
             line-height: 1.8;
         }
 
+        .hero-ctas {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
         /* Section Styles */
         section {
             padding: 6rem 2rem;
@@ -132,133 +139,108 @@
             text-align: center;
         }
 
-        /* Week Breakdown */
-        .week-item {
+        /* Problem/Solution */
+        .problem-list {
+            list-style: none;
+            max-width: 700px;
+            margin: 3rem auto;
+            text-align: left;
+        }
+
+        .problem-list li {
+            padding: 1rem 0;
+            padding-left: 2rem;
+            border-bottom: 1px solid #e8e8e8;
+            color: #666;
+            font-weight: 300;
+            line-height: 1.8;
+            position: relative;
+        }
+
+        .problem-list li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #2c2c2c;
+            font-weight: 400;
+        }
+
+        .problem-list li:last-child {
+            border-bottom: none;
+        }
+
+        .closing-statement {
+            margin-top: 3rem;
+            font-size: 1.2rem;
+            color: #666;
+            font-weight: 300;
+            line-height: 1.9;
+            text-align: center;
+            font-style: italic;
+        }
+
+        /* Program Breakdown */
+        .program-phase {
             margin-bottom: 3rem;
             padding-bottom: 3rem;
             border-bottom: 1px solid #e8e8e8;
         }
 
-        .week-item:last-child {
+        .program-phase:last-child {
             border-bottom: none;
         }
 
-        .week-item h3 {
+        .program-phase h3 {
             text-align: left;
         }
 
-        .week-item p {
-            color: #666;
-            font-weight: 300;
-            line-height: 1.9;
-            font-size: 1.1rem;
-        }
-
-        /* What's Included */
-        .included-list {
+        .program-phase ul {
             list-style: none;
-            max-width: 700px;
-            margin: 3rem auto;
+            margin-top: 1.5rem;
         }
 
-        .included-list li {
-            padding: 1rem 0;
-            border-bottom: 1px solid #e8e8e8;
+        .program-phase li {
+            padding: 0.75rem 0;
+            padding-left: 2rem;
             color: #666;
             font-weight: 300;
             line-height: 1.8;
-            font-size: 1.05rem;
+            position: relative;
         }
 
-        .included-list li:last-child {
-            border-bottom: none;
-        }
-
-        .included-list strong {
+        .program-phase li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
             color: #2c2c2c;
-            font-weight: 400;
         }
 
-        /* Lead Magnet */
-        .lead-magnet {
-            background: #fff;
-            border-top: 1px solid #e8e8e8;
-            border-bottom: 1px solid #e8e8e8;
-            text-align: center;
-        }
-
-        .lead-magnet h2 {
-            font-size: 2rem;
-        }
-
-        .lead-magnet-form {
-            max-width: 500px;
-            margin: 3rem auto 0 auto;
-        }
-
-        .lead-magnet-form input {
-            width: 100%;
-            padding: 1rem;
-            border: 1px solid #e8e8e8;
+        .program-outcome {
+            margin-top: 3rem;
+            padding: 2rem;
             background: #fafafa;
-            font-size: 1rem;
-            margin-bottom: 1rem;
-            font-family: inherit;
-            transition: border-color 0.3s;
+            border-left: 3px solid #2c2c2c;
+            font-size: 1.1rem;
+            color: #666;
+            font-weight: 300;
+            line-height: 1.9;
         }
 
-        .lead-magnet-form input:focus {
-            outline: none;
-            border-color: #2c2c2c;
-        }
-
-        .lead-magnet-form button {
-            width: 100%;
-            padding: 1rem;
-            background: #2c2c2c;
-            color: #fff;
-            border: none;
-            font-size: 0.95rem;
-            font-weight: 400;
-            cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            transition: background 0.3s;
-            font-family: inherit;
-        }
-
-        .lead-magnet-form button:hover {
-            background: #000;
-        }
-
-        .lead-magnet-note {
-            font-size: 0.85rem;
-            color: #999;
-            margin-top: 1rem;
-            letter-spacing: 0.5px;
-        }
-
-        /* Pricing Section */
-        .pricing-box {
-            background: #fff;
-            border: 2px solid #2c2c2c;
-            padding: 4rem 3rem;
-            max-width: 600px;
+        /* Pricing Card */
+        .pricing-simple {
+            max-width: 500px;
             margin: 3rem auto;
+            padding: 3rem;
+            border: 2px solid #2c2c2c;
             text-align: center;
+            background: #fff;
         }
 
         .price {
             font-size: 3rem;
             color: #2c2c2c;
             font-weight: 300;
-            margin: 1.5rem 0;
-        }
-
-        .price-note {
-            font-size: 0.9rem;
-            color: #999;
-            margin-bottom: 2rem;
+            margin: 2rem 0;
         }
 
         /* CTA Button */
@@ -291,6 +273,25 @@
         .cta-button.secondary:hover {
             background: #2c2c2c;
             color: #fff;
+        }
+
+        /* Lead Magnet */
+        .lead-magnet {
+            background: #fff;
+            border-top: 1px solid #e8e8e8;
+            border-bottom: 1px solid #e8e8e8;
+            text-align: center;
+        }
+
+        .lead-magnet h2 {
+            font-size: 2rem;
+        }
+
+        .lead-magnet-note {
+            font-size: 0.85rem;
+            color: #999;
+            margin-top: 1rem;
+            letter-spacing: 0.5px;
         }
 
         /* FAQ */
@@ -342,25 +343,8 @@
         }
 
         .faq-answer.active {
-            max-height: 1000px;
+            max-height: 500px;
             padding-bottom: 2rem;
-        }
-
-        .faq-answer ul {
-            list-style: none;
-            margin-top: 1rem;
-        }
-
-        .faq-answer li {
-            padding-left: 1.5rem;
-            margin-bottom: 0.5rem;
-            position: relative;
-        }
-
-        .faq-answer li:before {
-            content: "•";
-            position: absolute;
-            left: 0;
         }
 
         /* Footer */
@@ -376,15 +360,6 @@
             font-size: 0.85rem;
             letter-spacing: 1px;
             text-transform: uppercase;
-        }
-
-        footer a {
-            color: #2c2c2c;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            opacity: 0.5;
         }
 
         /* Mobile Menu */
@@ -460,6 +435,10 @@
                 padding: 4rem 1.5rem;
             }
 
+            .hero-ctas {
+                flex-direction: column;
+            }
+
             .faq-question {
                 font-size: 1rem;
             }
@@ -470,12 +449,12 @@
     <!-- Navigation -->
     <nav>
         <div class="container">
-            <div class="logo">Kevin Koza Fitness</div>
+            <div class="logo">Kevin Koza</div>
             <button class="menu-toggle">Menu</button>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#program">Program</a></li>
-                <li><a href="#enroll">Enroll</a></li>
+                <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#faq">FAQ</a></li>
             </ul>
         </div>
@@ -484,173 +463,197 @@
     <!-- Hero Section -->
     <section id="home" class="hero fade-in">
         <div class="hero-content">
-            <h1>Six Weeks to Sustainable Fitness</h1>
-            <p class="subtitle">Never lifted a weight? Intimidated by the gym? Perfect. This program is designed for complete beginners who want to build strength, confidence, and habits that actually stick.</p>
+            <h1>Lifting Weights Doesn't Have to Be Intimidating</h1>
+            <p class="subtitle">Whether you've never been inside a gym or you have some very basic exercise familiarity, but the habit never stuck, I made this program for you.<br><br>I want to guide you along the most foundational steps on your exercise journey-- focusing on mindset and connection to your body for maximum consistency, finding enjoyment in exercise, and stacking healthy habits which last a lifetime.<br><br>My goal is simple: help you build confidence and to learn to do the right things to achieve all of the benefits that exercise has to offer-- getting stronger, building muscle, losing fat, feeling mobile, and more.</p>
+            <div class="hero-ctas">
+                <a href="#program" class="cta-button">See What's Inside</a>
+                <a href="#leadmagnet" class="cta-button secondary">Start With Week 1 Free</a>
+            </div>
         </div>
     </section>
 
-    <!-- Lead Magnet Section -->
-    <section class="lead-magnet fade-in-content">
-        <h2>Start With Week 1 Free</h2>
-        <p class="section-intro">Get the first week of the program—including the fitness identity framework, bodyweight fundamentals, and your first action plan. No credit card required.</p>
-        <form class="lead-magnet-form" onsubmit="handleLeadMagnet(event)">
-            <input type="email" placeholder="Email address" required>
-            <button type="submit">Send Me Week 1</button>
-        </form>
-        <p class="lead-magnet-note">You'll also get occasional fitness tips (no spam).</p>
-    </section>
-
-    <!-- Program Overview -->
-    <section id="program" class="fade-in-content">
-        <h2>What You'll Learn (Week by Week)</h2>
-        <p class="section-intro">This program is about building blocks. Each week adds one new skill while reinforcing what you've already learned.</p>
-        
-        <div class="week-item">
-            <h3>Week 1: Building Fitness Identity</h3>
-            <p>Learn to see yourself as someone who exercises—before you even start lifting. Plus: understand protein needs, purchase your first kettlebell, master bodyweight fundamentals.</p>
-        </div>
-
-        <div class="week-item">
-            <h3>Week 2: Progressive Overload & Your First Circuit</h3>
-            <p>Understand SAID principle and how your body adapts. Join the Discord community. Learn your first kettlebell circuit and how to progressively increase difficulty.</p>
-        </div>
-
-        <div class="week-item">
-            <h3>Week 3: Motivation vs. Consistency</h3>
-            <p>Discover why motivation is fleeting and consistency wins. Master sets, reps, and weight selection. Expand your exercise toolkit with 3-4 different circuits.</p>
-        </div>
-
-        <div class="week-item">
-            <h3>Week 4: Mind-Muscle Connection</h3>
-            <p>Build body awareness so you actually feel the right muscles working. Research local gyms (no pressure to join yet). Learn muscle balance to avoid injury.</p>
-        </div>
-
-        <div class="week-item">
-            <h3>Week 5: Getting Into the Gym</h3>
-            <p>Tour a gym and just walk around—no workout required. Build location familiarity before combining it with new exercises. Reduce every source of friction.</p>
-        </div>
-
-        <div class="week-item">
-            <h3>Week 6: Your Gym Routine</h3>
-            <p>Transition from kettlebells to dumbbells, barbells, and machines. Get a complete 7-day gym program you can repeat and customize forever.</p>
-        </div>
-    </section>
-
-    <!-- What's Included -->
-    <section class="fade-in-content" style="background: #fff; border-top: 1px solid #e8e8e8; border-bottom: 1px solid #e8e8e8;">
-        <h2>Everything Included</h2>
-        <ul class="included-list">
-            <li><strong>39-Page Digital Guidebook</strong> – Complete program with weekly lessons, exercise appendix, and tracking planners</li>
-            <li><strong>6 Guided Video Circuits</strong> – Follow-along kettlebell workouts demonstrating proper form</li>
-            <li><strong>7-Day Gym Routine</strong> – Complete week of workouts to use after the program</li>
-            <li><strong>Weekly Tracking Planners</strong> – Pre-made templates to track identity statements, nutrition, and workouts</li>
-            <li><strong>Private Discord Community</strong> – Ask questions and get support from others on the same journey</li>
-            <li><strong>Email Support</strong> – Questions answered throughout the 6 weeks</li>
+    <!-- The Problem -->
+    <section class="fade-in-content">
+        <h2>Everyone Starts with These Same Struggles</h2>
+        <p class="section-intro">It's not just you; some people have had the right support structure and social framework to get started in the gym with ease.
+        Others just haven't found the right tools or environment yet. It often comes down to circumstance as to whether or not someone gets in great shape--
+        and I want to be that system for you now.
+        <br><br>
+        Starting something new is always uncomfortable. In fitness, it feels like everyone knows what they're doing-- don't get lost in the noise and let's start small.</p>
+        <ul class="problem-list">
+            <li>Have you walked into the gym and felt out of place? Maybe unsure of where to begin or what equipment to use?</li>
+            <li>Did you try random workout videos on YouTube? Get lost in the sea of advice on the internet?</li>
+            <li>You've done some lifting, built a little bit of momentum, but then fell off the horse and never got back on?</li>
         </ul>
+
+        <p class="closing-statement">Honestly, the hardest part is getting started. I can assure you that after working with beginners, the main thing that you need is to find tools to get out of your own head around exercise and to just do the work.<br><br>It's easier said than done-- I built this program to make the system as easy as possible to follow, building momentum and removing friction from getting started and maintaining the habit.</p>
     </section>
 
-    <!-- Pricing/Enrollment -->
-    <section id="enroll" class="fade-in-content">
-        <h2>Ready to Start?</h2>
-        <p class="section-intro">Get the complete 6-week program and start building sustainable fitness habits today.</p>
-        
-        <div class="pricing-box">
-            <h3>Complete 6-Week Program</h3>
-            <div class="price">$47</div>
-            <p class="price-note">One-time payment • Instant access</p>
-            <ul style="list-style: none; text-align: left; margin: 2rem 0;">
-                <li style="padding: 0.5rem 0; color: #666;">✓ 39-page guidebook</li>
-                <li style="padding: 0.5rem 0; color: #666;">✓ 6 video circuits</li>
-                <li style="padding: 0.5rem 0; color: #666;">✓ 7-day gym routine</li>
-                <li style="padding: 0.5rem 0; color: #666;">✓ Discord community access</li>
-                <li style="padding: 0.5rem 0; color: #666;">✓ Lifetime access to materials</li>
+    <!-- The Program -->
+    <section id="program" class="fade-in-content" style="background: #fff; border-top: 1px solid #e8e8e8; border-bottom: 1px solid #e8e8e8;">
+        <h2>Six Weeks to Sustainable Fitness</h2>
+        <p class="section-intro">Don't follow a lifting routine without listening to your body-- instead, understand what goes into muscle growth, build confidence in yourself, and forge exercise identity to last a lifetime.<br><br>Start with actionable yet minimal changes to your routine. You'll barely notice the time investment, and it's easier to get started than you think--these changes will mean real results.</p>
+        <div class="program-phase">
+            <h3>Weeks 1-2: Build Fitness Identity, Community, and Understand Growth</h3>
+            <ul>
+                <li>Start with actionable steps to shape your identity towards someone who prioritizes fitness.</li>
+                <li>Learn some basic bodyweight and kettlebell exercises to build familiarity with fundamental movement patterns.</li>
+                <li>Follow a simple planner to start stacking the habit of exercise and affirming your positive mindset.</li>
+                <li>Build community and get advice from me directly, plus other members!</li>
+                <li>Understand what actually goes into getting fit, versus spinning wheels in the gym.</li>
             </ul>
-            <a href="https://whop.com/your-beginner-program-link" class="cta-button" target="_blank">Get Started Now</a>
-            <p style="margin-top: 2rem; font-size: 0.9rem; color: #666;">30-day money-back guarantee</p>
         </div>
 
-        <div style="text-align: center; margin-top: 3rem; padding-top: 3rem; border-top: 1px solid #e8e8e8;">
-            <p style="color: #666; margin-bottom: 1.5rem; font-size: 1.1rem;">Ready for personalized coaching?</p>
-            <a href="/" class="cta-button secondary">Explore 1:1 Coaching</a>
+        <div class="program-phase">
+            <h3>Weeks 3-4: Find Motivation, Enjoyment, and Principles for Health</h3>
+            <ul>
+                <li>Tap into insights for building consistency and leveraging motivation and discipline.</li>
+                <li>Learn presence and mind-muscle connection for maximum enjoyment while lifting-- the chore becomes the reward.</li>
+                <li>Understand muscle balance, progressive overload, and how to sculpt your program so that you stay in great shape without promoting imbalance and injury.</li>
+            </ul>
+        </div>
+
+        <div class="program-phase">
+            <h3>Weeks 5-6: Solidify Confidence, Autonomy, and Extend Your Routine</h3>
+            <ul>
+                <li>Incorporate strategies to make exercise easier (and more enjoyable).</li>
+                <li>Learn to bridge the gaps that cause roadblocks in your fitness journey.</li>
+                <li>Break down reasons why you might be unfamiliar and anxious around the gym.</li>
+                <li>Elevate your routine and build your toolset around weight lifting.</li>
+                <li>Extend your practice confidently into the gym!</li>
+            </ul>
+        </div>
+
+        <div class="program-outcome">
+            By the end of 6 weeks, you'll have built muscle and you'll feel confident with lifting. You'll be free of anxiety and confusion around what actually drives progress. Enjoy your newfound confidence and momentum!
         </div>
     </section>
 
-    <!-- FAQ Section -->
+    <!-- Lead Magnet -->
+    <section id="leadmagnet" class="lead-magnet fade-in-content">
+        <h2>Start With 3 Weeks Free.</h2>
+        <p class="section-intro">I want you to experience the program and my philosophies of exercise before committing to anything. Get the first 3 weeks completely free—-learn bodyweight and kettlebell circuits, track your progress, and most importantly, solidify fitness identity to drive your growth.<br><br>All I ask is your email to get you started!</p>
+        
+        <!-- ConvertKit Form Placeholder - You'll need to create this form in ConvertKit -->
+        <div style="max-width: 500px; margin: 3rem auto 0 auto;">
+            <!-- 
+            INSTRUCTIONS: Create a new form in ConvertKit for beginners
+            1. Name it "Beginner - Week 1 Free"
+            2. Add tag: "beginner-fitness"
+            3. Upload Week 1 guide as incentive
+            4. Replace this comment with the embed code
+            -->
+            <form class="lead-magnet-form" style="max-width: 500px; margin: 0 auto;">
+                <input type="email" placeholder="Email Address" required style="width: 100%; padding: 1rem; border: 1px solid #e8e8e8; background: #fafafa; font-size: 1rem; margin-bottom: 1rem; font-family: inherit;">
+                <button type="submit" style="width: 100%; padding: 1rem; background: #2c2c2c; color: #fff; border: none; font-size: 0.95rem; font-weight: 400; cursor: pointer; text-transform: uppercase; letter-spacing: 2px; font-family: inherit;">Send 3 Weeks Free</button>
+            </form>
+        </div>
+        
+        <p class="lead-magnet-note">I'll send you occasional lifting tips, exercise insights, and strategies for health. Unsubscribe anytime.</p>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="fade-in-content">
+        <h2>Start Now</h2>
+        <p class="section-intro">If you want the complete program, including tracking, video demonstrations, and individual guidance-—here's the investment.</p>
+        
+        <div class="pricing-simple">
+            <h3 style="text-align: center; margin-bottom: 1rem;">Complete 6 Weeks</h3>
+            <div class="price">$47</div>
+            <p style="color: #666; margin-bottom: 2rem; line-height: 1.9;">One payment for lifetime access.</p>
+            
+            <p style="text-align: left; margin-bottom: 1.5rem; color: #666; font-weight: 300; line-height: 1.9;">What's included:</p>
+            <ul class="problem-list" style="margin: 0;">
+                <li>Each week including notes on mindset and key fitness principles made simple</li>
+                <li>Video demonstrations for bodyweight and kettlebell exercises</li>
+                <li>Action items and a weekly planner</li>
+                <li>Progress and habit tracking made stupid-easy</li>
+                <li>Community access</li>
+                <li>Getting-started gym guide and routine</li>
+            </ul>
+            
+            <a href="#" class="cta-button" style="display: inline-block; margin-top: 2rem;">Join Now</a>
+        </div>
+
+        <p style="text-align: center; font-size: 1.1rem; color: #666; font-weight: 300; line-height: 1.9; max-width: 600px; margin: 3rem auto 0 auto;">Forget individual personal training sessions for $100--you'll learn more about yourself and develop the skills to extend your practice for just $47.</p>
+        <p style="text-align: center; font-size: 1.1rem; color: #666; font-weight: 300; line-height: 1.9; max-width: 600px; margin: 3rem auto 0 auto;">I'm confident in the routine; if you're unsatisfied with your growth and new skills at the end of the six weeks, feel free to email me for a full refund.</p>
+    </section>
+
+    <!-- FAQ -->
     <section id="faq" class="fade-in-content" style="background: #fff; border-top: 1px solid #e8e8e8; border-bottom: 1px solid #e8e8e8;">
-        <h2>Frequently Asked Questions</h2>
+        <h2>Questions You Might Have</h2>
         <div style="max-width: 700px; margin: 3rem auto;">
             <div class="faq-item">
                 <button class="faq-question" onclick="toggleFaq(this)">
-                    <span>Who is this for?</span>
+                    <span>I've never been to a gym before. Is this for me?</span>
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-answer">
-                    <p>This program is designed for complete beginners who want to build a sustainable fitness practice. Whether you've never lifted a weight, feel intimidated by the gym, or have tried and failed to stick with exercise before—this is for you.</p>
+                    <p>If you have little or no experience and you you want a structured routine which shows you exactly what to do to make progress, this is for you. Maybe you’d like to get started with fitness, but you have some anxiety around the gym and you haven’t solidified the foundational habits. Whether you want to find the right way to work out at home, or you’d like to build confidence in the gym, I made this with you in mind.
+                    </p>
                 </div>
             </div>
-
             <div class="faq-item">
                 <button class="faq-question" onclick="toggleFaq(this)">
-                    <span>What will I achieve?</span>
+                    <span>What if I can't do certain exercises?</span>
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-answer">
-                    <p>Over 6 weeks, you will:</p>
-                    <ul>
-                        <li>Build a sustainable at-home routine that you can optionally extend into the gym</li>
-                        <li>Shift your identity toward being someone who prioritizes fitness</li>
-                        <li>Overcome gym anxiety and build genuine confidence</li>
-                        <li>Understand key training principles you can use for years to come</li>
-                        <li>Walk away with a complete gym routine and the knowledge to continue independently</li>
-                    </ul>
+                    <p>Every exercise has modifications, most of which are explained in the videos. We can work around any limitations--this program is meant to meet you where you are today without assumptions. I'm always available for individual discussion.</p>
                 </div>
             </div>
-
             <div class="faq-item">
                 <button class="faq-question" onclick="toggleFaq(this)">
-                    <span>Do I need equipment?</span>
+                    <span>Do I need a gym membership?</span>
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-answer">
-                    <p>You can start with just bodyweight exercises (Week 1). By Week 2, we recommend purchasing a light and heavy kettlebell (around $30-80 total). A gym membership is optional—the program is designed to work at home first, then transition to the gym when you're ready.</p>
+                    <p>No. The six weeks can be performed without advancing into a gym--and you're open to making the decision of optionally extending your practice on the sixth week. I built out strategies to get you in the gym if that's where you want to be.</p>
                 </div>
             </div>
-
             <div class="faq-item">
                 <button class="faq-question" onclick="toggleFaq(this)">
-                    <span>Is this self-paced?</span>
+                    <span>What happens after 6 weeks?</span>
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-answer">
-                    <p>Yes! The program is designed as a 6-week progression, but you can move through it at your own pace. Take longer if you need to, or move faster if you're ready. You have lifetime access to all materials.</p>
+                    <p>You'll have the foundation to continue training on your own, either at home or in the gym. I like to show you how to use all of the tools which drive progress. I'm open for more extensive individual coaching after the program.</p>
                 </div>
             </div>
-
             <div class="faq-item">
                 <button class="faq-question" onclick="toggleFaq(this)">
-                    <span>What if I'm not satisfied?</span>
+                    <span>Is there a refund policy?</span>
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-answer">
-                    <p>If you're not satisfied with the program for any reason within 30 days, just email me and I'll refund you completely. No questions asked.</p>
+                    <p>Yes. If you get through the full program, or you decide halfway through that the material isn't working for you, you can email me for a full refund, no questions asked (except what might help clients like you in the future).</p>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="faq-item">
-                <button class="faq-question" onclick="toggleFaq(this)">
-                    <span>How is this different from 1:1 coaching?</span>
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>This is a self-guided program—you get all the materials and community support, but without the daily 1:1 accountability and custom programming. It's perfect for self-motivated beginners who want a structured system. If you want personalized coaching, check out the 90-day transformation program.</p>
-                </div>
-            </div>
+    <!-- Upsell Mention -->
+    <section class="fade-in-content" style="background: #fafafa;">
+        <h2>Looking for 1:1 Coaching?</h2>
+        <p class="section-intro" style="margin-bottom: 2rem;">My self-guided six week program is generally geared at beginner or early-intermediate lifters. If you're already somewhat familiar with exercise, but it hasn't clicked yet to get you the gains you're after, I'm here for you. Learn more about daily accountability, form checks, personalized program and coaching here.<br><br>It's higher commitment and higher cost but it will save you time and effort.</p>
+        <div style="text-align: center;">
+            <a href="index.html" class="cta-button secondary">Explore Direct Coaching</a>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="fade-in-content" style="text-align: center; background: #fff; border-top: 1px solid #e8e8e8; border-bottom: 1px solid #e8e8e8;">
+        <h2>Ready to Start?</h2>
+        <p class="section-intro">Let's work together.</p>
+        <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+            <a href="#leadmagnet" class="cta-button secondary">Get 3 Weeks Free</a>
+            <a href="#pricing" class="cta-button">Get All 6 Weeks - $47</a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Kevin Koza | <a href="/">1:1 Coaching</a> | <a href="mailto:kev@kevinkoza.com">Contact</a></p>
+        <p>&copy; 2025 Kevin Koza</p>
     </footer>
 
     <script>
@@ -672,14 +675,6 @@
             
             answer.classList.toggle('active');
             icon.classList.toggle('active');
-        }
-
-        // Handle lead magnet
-        function handleLeadMagnet(event) {
-            event.preventDefault();
-            const email = event.target.querySelector('input[type="email"]').value;
-            alert(`Thank you! Check ${email} for Week 1 of the program.`);
-            event.target.reset();
         }
 
         // Fade-in content on scroll
@@ -708,7 +703,7 @@
             nav.classList.toggle('active');
         });
 
-        // Close mobile menu
+        // Close mobile menu when link clicked
         document.querySelectorAll('nav a').forEach(link => {
             link.addEventListener('click', function() {
                 const nav = document.querySelector('nav ul');
