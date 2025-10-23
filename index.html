@@ -201,16 +201,6 @@
             border-bottom: none;
         }
 
-        .closing-statement {
-            margin-top: 3rem;
-            font-size: 1.2rem;
-            color: #666;
-            font-weight: 300;
-            line-height: 1.9;
-            text-align: center;
-            font-style: italic;
-        }
-
         /* Program Breakdown */
         .program-phase {
             margin-bottom: 3rem;
@@ -241,180 +231,41 @@
         }
 
         .program-phase li:before {
-            content: "→";
+            content: "•";
             position: absolute;
-            left: 0;
+            left: 0.5rem;
             color: #2c2c2c;
         }
 
-        .program-outcome {
-            margin-top: 3rem;
-            padding: 2rem;
-            background: #fafafa;
-            border-left: 3px solid #2c2c2c;
-            font-size: 1.1rem;
-            color: #666;
-            font-weight: 300;
-            line-height: 1.9;
-        }
-
-        /* Value Stack */
-        .value-stack {
-            background: #fff;
-            padding: 3rem;
-            border: 2px solid #2c2c2c;
-            max-width: 700px;
-            margin: 3rem auto;
-        }
-
-        .value-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 1rem 0;
-            border-bottom: 1px solid #e8e8e8;
-            color: #666;
-            font-weight: 300;
-        }
-
-        .value-item:last-child {
-            border-bottom: none;
-            font-weight: 400;
-            color: #2c2c2c;
-            font-size: 1.2rem;
+        .program-phase p {
             margin-top: 1rem;
-            padding-top: 1.5rem;
-            border-top: 2px solid #2c2c2c;
-        }
-
-        .value-amount {
-            color: #2c2c2c;
-            font-weight: 400;
-        }
-
-        .bonus-section {
-            background: #fafafa;
-            padding: 2rem;
-            margin-top: 2rem;
-        }
-
-        .bonus-section h4 {
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 1rem;
-            color: #2c2c2c;
-        }
-
-        .bonus-item {
-            padding: 0.75rem 0;
             color: #666;
+            line-height: 1.8;
             font-weight: 300;
         }
 
-        /* Guarantee Box */
-        .guarantee-box {
-            background: #fafafa;
-            border: 2px solid #2c2c2c;
-            padding: 3rem;
-            max-width: 700px;
-            margin: 3rem auto;
-            text-align: center;
-        }
-
-        .guarantee-box h3 {
-            text-align: center;
-            margin-bottom: 1.5rem;
-        }
-
-        .guarantee-box p {
-            font-size: 1.1rem;
-            color: #666;
-            font-weight: 300;
-            line-height: 1.9;
-        }
-
-        /* Pricing Section */
-        .pricing-options {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            max-width: 700px;
-            margin: 3rem auto;
-        }
-
-        .pricing-card {
-            padding: 3rem 2rem;
-            border: 2px solid #e8e8e8;
-            text-align: center;
-            transition: border-color 0.3s;
-        }
-
-        .pricing-card:hover {
-            border-color: #2c2c2c;
-        }
-
-        .price {
-            font-size: 2.5rem;
-            color: #2c2c2c;
-            font-weight: 300;
-            margin: 1rem 0;
-        }
-
-        .price-label {
-            font-size: 0.9rem;
-            color: #999;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .savings {
-            background: #2c2c2c;
-            color: #fff;
-            padding: 0.5rem 1rem;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            display: inline-block;
-            margin-top: 1rem;
-        }
-
-        .scarcity-notice {
-            background: #2c2c2c;
-            color: #fff;
-            padding: 1.5rem;
-            text-align: center;
-            margin: 2rem auto;
-            max-width: 700px;
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* CTA Button */
+        /* CTA Buttons */
         .cta-button {
             display: inline-block;
-            padding: 1.2rem 3rem;
+            padding: 1rem 2.5rem;
             background: #2c2c2c;
             color: #fff;
             text-decoration: none;
             font-size: 0.95rem;
             font-weight: 400;
-            cursor: pointer;
             text-transform: uppercase;
             letter-spacing: 2px;
-            transition: background 0.3s;
-            border: none;
-            font-family: inherit;
+            transition: opacity 0.3s;
+            border: 2px solid #2c2c2c;
         }
 
         .cta-button:hover {
-            background: #000;
+            opacity: 0.7;
         }
 
         .cta-button.secondary {
-            background: #fff;
+            background: transparent;
             color: #2c2c2c;
-            border: 1px solid #2c2c2c;
         }
 
         .cta-button.secondary:hover {
@@ -422,57 +273,75 @@
             color: #fff;
         }
 
-        /* Lead Magnet */
+        /* Lead Magnet Section */
         .lead-magnet {
             background: #fff;
             border-top: 1px solid #e8e8e8;
             border-bottom: 1px solid #e8e8e8;
-            text-align: center;
-        }
-
-        .lead-magnet h2 {
-            font-size: 2rem;
         }
 
         .lead-magnet-note {
-            font-size: 0.85rem;
+            margin-top: 2rem;
+            font-size: 0.9rem;
             color: #999;
-            margin-top: 1rem;
-            letter-spacing: 0.5px;
+            text-align: center;
+            font-weight: 300;
+        }
+
+        /* Pricing */
+        .pricing-simple {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 3rem;
+            background: #fff;
+            border: 1px solid #e8e8e8;
+        }
+
+        .price {
+            font-size: 3rem;
+            font-weight: 300;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            color: #2c2c2c;
+        }
+
+        .price-note {
+            text-align: center;
+            color: #666;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
         }
 
         /* FAQ */
         .faq-item {
-            margin-bottom: 1.5rem;
             border-bottom: 1px solid #e8e8e8;
+            margin-bottom: 1.5rem;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
         }
 
         .faq-question {
             width: 100%;
-            text-align: left;
             padding: 1.5rem 0;
             background: none;
             border: none;
-            font-size: 1.2rem;
-            color: #2c2c2c;
-            font-weight: 400;
+            text-align: left;
             cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            font-size: 1.1rem;
+            color: #2c2c2c;
+            font-weight: 400;
             font-family: inherit;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .faq-question:hover {
-            opacity: 0.7;
         }
 
         .faq-icon {
             font-size: 1.5rem;
             transition: transform 0.3s;
-            font-weight: 300;
+            color: #2c2c2c;
         }
 
         .faq-icon.active {
@@ -483,47 +352,46 @@
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s ease;
-            color: #666;
-            font-weight: 300;
-            line-height: 1.9;
-            font-size: 1.1rem;
         }
 
         .faq-answer.active {
             max-height: 500px;
-            padding-bottom: 2rem;
+            padding-bottom: 1.5rem;
+        }
+
+        .faq-answer p {
+            color: #666;
+            line-height: 1.9;
+            font-weight: 300;
         }
 
         /* Testimonials */
         .testimonial-full {
             max-width: 700px;
             margin: 0 auto;
-            padding: 3rem;
-            background: #fafafa;
+            padding: 2rem;
+            background: #fff;
             border-left: 3px solid #2c2c2c;
         }
 
         .testimonial-full p {
-            font-size: 1.1rem;
-            color: #666;
-            font-weight: 300;
-            line-height: 1.9;
             margin-bottom: 1.5rem;
+            color: #666;
+            line-height: 1.9;
+            font-weight: 300;
+        }
+
+        .testimonial-full p:last-of-type:not(.quote-author) {
+            margin-bottom: 0;
         }
 
         /* Footer */
         footer {
-            background: #fafafa;
+            padding: 3rem 2rem;
             text-align: center;
-            padding: 4rem 2rem;
-            border-top: 1px solid #e8e8e8;
-        }
-
-        footer p {
             color: #999;
-            font-size: 0.85rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
+            font-size: 0.9rem;
+            font-weight: 300;
         }
 
         /* Mobile Menu */
@@ -531,28 +399,16 @@
             display: none;
             background: none;
             border: none;
-            color: #2c2c2c;
             font-size: 1.5rem;
+            color: #2c2c2c;
             cursor: pointer;
-            font-weight: 300;
         }
 
-        /* Animations */
-        .fade-in {
-            opacity: 0;
-            animation: fadeIn 1s ease-in forwards;
-        }
-
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-            }
-        }
-
+        /* Fade-in Animation */
         .fade-in-content {
             opacity: 0;
             transform: translateY(20px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            transition: opacity 0.6s ease, transform 0.6s ease;
         }
 
         .fade-in-content.visible {
@@ -560,8 +416,32 @@
             transform: translateY(0);
         }
 
-        /* Responsive */
+        /* Mobile Styles */
         @media (max-width: 768px) {
+            nav .container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .menu-toggle {
+                display: block;
+                position: absolute;
+                right: 2rem;
+                top: 2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+                width: 100%;
+                display: none;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
             .hero h1 {
                 font-size: 2rem;
             }
@@ -574,41 +454,12 @@
                 font-size: 1.8rem;
             }
 
-            nav ul {
-                display: none;
-                position: fixed;
-                top: 90px;
-                left: 0;
-                right: 0;
-                background: #fafafa;
-                flex-direction: column;
-                padding: 2rem;
-                border-bottom: 1px solid #e8e8e8;
-                gap: 1.5rem;
-            }
-
-            nav ul.active {
-                display: flex;
-            }
-
-            .menu-toggle {
-                display: block;
-            }
-
-            section {
-                padding: 4rem 1.5rem;
-            }
-
-            .pricing-options {
-                grid-template-columns: 1fr;
-            }
-
             .hero-ctas {
                 flex-direction: column;
             }
 
-            .faq-question {
-                font-size: 1rem;
+            .pricing-simple {
+                padding: 2rem;
             }
         }
     </style>
@@ -618,224 +469,128 @@
     <nav>
         <div class="container">
             <div class="logo">Kevin Koza</div>
-            <button class="menu-toggle">Menu</button>
+            <button class="menu-toggle">☰</button>
             <ul>
                 <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#program">Program</a></li>
-                <li><a href="#pricing">Investment</a></li>
-                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#apply">Apply</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section id="home" class="hero fade-in">
         <div class="hero-content">
-            <h1>You're Lifting Consistently. But You're Not Seeing the Results.</h1>
-            <p class="subtitle">You show up to the gym multiple times per week. You're disciplined. But you're still spinning your wheels—not sure if you're doing the right exercises, lifting the right weight, or even enjoying the process anymore.<br><br>I'm offering 90 days of coaching where my goal is simple: teach you the principles so you can finally see progress and never need another coach again.</p>
+            <h1>Showing up to the gym, semi-consistent, without a real plan.</h1>
+            <p class="subtitle">Hitting the gym like it's a chore, trying to tap into real muscle growth. It's easy to lose enjoyment of the process itself, especially when you know the basics, but you're not sure what'll get you to the physique and fitness you know you can earn. If you're not sure what to do, defaulting to the same lifts on the same cadence and hitting the same plateaus, I want to work with you.</p>
             <div class="hero-ctas">
-                <a href="#apply" class="cta-button">Book A Strategy Call</a>
-                <a href="#leadmagnet" class="cta-button secondary">Download My Training Framework</a>
+                <a href="#apply" class="cta-button">Book a Strategy Call</a>
+                <a href="#framework" class="cta-button secondary">Get the Free Framework</a>
             </div>
         </div>
     </section>
 
-    <!-- Social Proof Quick -->
+    <!-- Quick Social Proof -->
     <section class="social-proof-quick fade-in-content">
         <div class="quote">
-            "It's good having a cheerleader in a way. It makes me feel a lot more confident, and getting that mobility back is important. And you're easy to talk to—that's the nice thing."
-            <div class="quote-author">— Tom, Client</div>
+            "It's good having a cheerleader in a way—you know, that's what's one thing nice about a trainer, they're there to support you. Being able to modify the workout program to what I was feeling and what you were sensing. To keep the flow going—I think you do that well."
+            <p class="quote-author">— Tom, Client</p>
         </div>
     </section>
 
-    <!-- The Problem -->
-    <section class="fade-in-content">
-        <h2>Does This Sound Familiar?</h2>
-        <p class="section-intro">You've been lifting for months—maybe even years—but something isn't clicking. You're doing the work, but the results just aren't there.</p>
+    <!-- Problem Section -->
+    <section id="about" class="fade-in-content">
+        <h2>You're Probably Working Hard Enough</h2>
+        <p class="section-intro">Most people push harder on a problem that needs a strategic solution. Maybe you're doing everything that people say you do, or you're following pointers from the sea of advice on the internet. I guarantee that with the same amount of work, applied differently, you'll make gains.</p>
         
         <ul class="problem-list">
-            <li>You're spinning your wheels in the gym. You show up consistently, but you can't tell if you're actually making progress or just going through the motions.</li>
-            <li>You're lifting all the time, but you're not seeing the muscle growth or strength gains you expected. Your lifts feel stuck.</li>
-            <li>Weightlifting feels like a chore. You're relying purely on discipline to drag yourself to the gym, which makes the whole thing feel exhausting rather than energizing.</li>
-            <li>You leave workouts feeling absolutely zonked—sore for three days afterward—and you're not even sure if beating yourself up like that is helping or hurting.</li>
-            <li>You've watched all the YouTube videos and read the articles, but you still don't know how to apply the principles to YOUR body and YOUR schedule.</li>
+            <li>You're lifting regularly, but you feel and look the same as you did a year ago.</li>
+            <li>You think you need to track everything because people say that "abs are made in the kitchen."</li>
+            <li>Your main lifts feel like a chore and you walk out of the gym exhausted.</li>
+            <li>You're relying on discipline to get to the gym, unsure if it's even getting you anywhere.</li>
+            <li>You beat yourself if you miss a workout, thinking that it's all-or-nothing.</li>
+            <li>Post-workouts leave you rocked and you see other people with more juice from less squeeze. Isn't there supposed to be recovery?</li>
         </ul>
 
-        <p class="closing-statement">I think the problem isn't that you're not working hard enough. The problem is that you're missing the underlying principles—the system that tells you what to do, when to do it, and how to adjust when something isn't working.<br><br>Most programs give you a template and expect it to work for everyone. But your body, your recovery capacity, your schedule, your goals—they're all unique. You need someone who can teach you to adapt the principles to your specific situation, then step back and let you run with it.</p>
+        <p class="section-intro">I went through the motions for a long time. Once I learned and applied fundamental fitness principles, I could assess what actually causes growth, mobility, and health.</p>
     </section>
 
-    <!-- Video Introduction -->
-    <section class="fade-in-content" style="background: #fff; border-top: 1px solid #e8e8e8; border-bottom: 1px solid #e8e8e8;">
-        <h2>A Quick Introduction</h2>
-        <p class="section-intro">I spent five years working as a software engineer before I realized I wanted something different—something where I could help people directly and maintain control over my own schedule. I approach training the same way I approached engineering: as a system with principles you can learn and apply.<br><br>Here's a bit about my philosophy:</p>
-        
-        <div style="max-width: 800px; margin: 3rem auto;">
-            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: #000;">
-                <iframe 
-                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
-                    src="https://www.youtube.com/embed/l7-u1DyamIg" 
-                    title="Why Work With Me" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
-            </div>
-        </div>
-
-        <p style="text-align: center; font-size: 1.1rem; color: #666; font-weight: 300; line-height: 1.9; max-width: 700px; margin: 2rem auto 0 auto;">I consider my job done when you can walk into any gym, know exactly what to do, and execute it confidently without me. That's the goal.</p>
-    </section>
-
-    <!-- The Solution: 90-Day Program -->
-    <section id="program" class="fade-in-content" style="background: #fff; border-top: 1px solid #e8e8e8; border-bottom: 1px solid #e8e8e8;">
-        <h2>How We'll Work Together</h2>
-        <p class="section-intro">I've structured this as three distinct phases, each building on the last. The aim is to move you from dependence to independence over 90 days.</p>
-
-        <div class="program-phase">
-            <h3>Month One: Building the Foundation</h3>
-            <ul>
-                <li>We start with a custom program built around your goals, available equipment, and schedule constraints</li>
-                <li>Daily text check-ins where I respond to everything—this is about building the habit first</li>
-                <li>Weekly 30-minute calls where we troubleshoot what's working and what isn't</li>
-                <li>Access to my private Discord where you can ask questions and connect with others in the program</li>
-            </ul>
-        </div>
-
-        <div class="program-phase">
-            <h3>Month Two: Understanding Progressive Overload</h3>
-            <ul>
-                <li>We adjust your program based on YOUR actual progress, not some predetermined template</li>
-                <li>Form check videos so you're lifting safely and effectively (this alone prevents most injuries)</li>
-                <li>Nutrition guidance that fits your lifestyle—I'm not going to guilt trip you about meal prep</li>
-                <li>You start understanding the principles: why we're doing what we're doing</li>
-            </ul>
-        </div>
-
-        <div class="program-phase">
-            <h3>Month Three: Becoming Independent</h3>
-            <ul>
-                <li>I teach you how to program for yourself—the principles of progressive overload, volume, and recovery</li>
-                <li>We build your plan for maintaining results after our 90 days end</li>
-                <li>Final assessment and your roadmap for continued progress</li>
-                <li>You graduate understanding how to adapt programs to your needs without a coach</li>
-            </ul>
-        </div>
-
-        <div class="program-outcome">
-            Success looks like this: You finish the program with visible progress AND the knowledge to keep improving without me. That's what I'm aiming for.
-        </div>
-    </section>
-
-    <!-- Value Stack -->
+    <!-- Solution Section -->
     <section class="fade-in-content">
-        <h2>What's Included</h2>
-        
-        <div class="value-stack">
-            <div class="value-item">
-                <span>Custom training program</span>
-                <span class="value-amount">$500 value</span>
-            </div>
-            <div class="value-item">
-                <span>12 weekly coaching calls (12+ hours)</span>
-                <span class="value-amount">$1,200 value</span>
-            </div>
-            <div class="value-item">
-                <span>Daily text accountability</span>
-                <span class="value-amount">$450 value</span>
-            </div>
-            <div class="value-item">
-                <span>Form check videos</span>
-                <span class="value-amount">Priceless</span>
-            </div>
-            <div class="value-item">
-                <span>Private Discord community</span>
-                <span class="value-amount">$97 value</span>
-            </div>
-            <div class="value-item">
-                <span>Nutrition guidance</span>
-                <span class="value-amount">$300 value</span>
-            </div>
-            <div class="value-item">
-                <span>Total Value</span>
-                <span class="value-amount">$2,547</span>
-            </div>
+        <h2>What Actually Works</h2>
+        <p class="section-intro">There are just a few key changes that you need that will set you on the right path.</p>
 
-            <div class="bonus-section">
-                <h4>You'll Also Get:</h4>
-                <div class="bonus-item">→ Complete exercise library with video demonstrations</div>
-                <div class="bonus-item">→ Post-program maintenance guide</div>
-                <div class="bonus-item">→ Lifetime access to the Discord community</div>
-            </div>
+        <ul class="problem-list">
+            <li>Adapting your program to prioritize the right lifts, meeting you with your time constraints and availability. Build something that matches your body and enjoyment for maximum adherence to a routine.</li>
+            <li>Making it easy on yourself, mentally, physically, and emotionally. Learn strategies around long-term thinking, tapping into motivation, and learning that there are more ways to be consistent than just "going to the gym."</li>
+            <li>Being patient as a tactic. Getting jacked comes down to recovery--work hard when you need to, then rest. People often don't fully understand and skip this step, in and out of the gym.</li>
+            <li>Accountability and community. It's far easier to stay on the horse when you know that you're not at it alone.</li>
+            <li>Applying mindset hacks and philosophies that make the gym inherently enjoyable. Building body awareness is key.</li>
+            <li>Learn tools for yourself-- anyone can apply the principles to suit their needs, you just need to know what actually drives growth.</li>
+            <li>Finding that tracking isn't black and white. Apply it where it matters without plugging your calories into an app.</li>
+            <li>Understanding what matters in terms of nutrition and learning how to eat without drastic changes.</li>
+        </ul>
 
-            <div class="value-item">
-                <span>Your Investment</span>
-                <span class="value-amount">$999</span>
-            </div>
-        </div>
+        <p class="section-intro">Training can be both systematic and intuitive. You'll learn to trust yourself and your judgment, listen to your body, and let it tell you what needs to be done.</p>
     </section>
 
-    <!-- Guarantee -->
-    <section class="fade-in-content" style="background: #fafafa;">
-        <div class="guarantee-box">
-            <h3>30-Day Money-Back Guarantee</h3>
-            <p>Work with me for the first month. If you're not making progress, don't feel supported, or realize this isn't the right fit—I'll refund your first payment completely. No questions asked.</p>
-            <p style="margin-top: 1.5rem; font-weight: 400;">I'm confident this works if you show up consistently. But if it doesn't work for you, you shouldn't have to pay for it.</p>
-        </div>
-    </section>
+    <!-- Program Breakdown -->
+    <section id="program" class="fade-in-content" style="background: #fff; border-top: 1px solid #e8e8e8; border-bottom: 1px solid #e8e8e8;">
+        <h2>Enroll in the 90-Day Program</h2>
+        <p class="section-intro">Training should be dynamic, going with the ebb and flow of life. You can set yourself up for success and learn that you're building a lifestyle with the side-effect of being jacked. My goal as a trainer is to make myself obsolete as quickly as possible so that you can lead, but I'll be here for you for as long as you need.</p>
 
-    <!-- Pricing -->
-    <section id="pricing" class="fade-in-content">
-        <h2>The Investment</h2>
-        
-        <div class="pricing-options">
-            <div class="pricing-card">
-                <p class="price-label">Pay in Full</p>
-                <div class="price">$999</div>
-                <p style="color: #666; margin-bottom: 1.5rem;">One-time payment</p>
-                <span class="savings">Save $100</span>
-            </div>
-            <div class="pricing-card">
-                <p class="price-label">Payment Plan</p>
-                <div class="price">$333<span style="font-size: 1.5rem;">/mo</span></div>
-                <p style="color: #666; margin-bottom: 1.5rem;">3 monthly payments</p>
-                <p style="color: #999; font-size: 0.9rem;">Total: $1,099</p>
-            </div>
-        </div>
-
-        <div style="max-width: 700px; margin: 3rem auto; padding: 2rem; background: #fafafa; text-align: left;">
-            <h3 style="margin-bottom: 1.5rem; text-align: left;">Let me be honest about the cost.</h3>
-            <p style="margin-bottom: 1.5rem; font-size: 1.1rem; color: #666; font-weight: 300; line-height: 1.9;">$333 per month isn't cheap. I know that. But I think it's fair when you consider what you're getting:</p>
-            <ul class="problem-list">
-                <li>Most personal trainers charge $75-150 per session. Two sessions per week for 12 weeks would run you $1,800-3,600.</li>
-                <li>Generic programs and gym memberships add up to around $450 over three months, but they don't give you personalized guidance or teach you the underlying principles.</li>
-                <li>This program gives you daily access to me, 12 coaching calls, custom programming, form checks, and—most importantly—you learn how the system works.</li>
+        <div class="program-phase">
+            <h3>Month 1: Foundations, Habits, and Enjoyment</h3>
+            <p><strong>Goal:</strong> Identify gaps that are holding you back and solidify habits.</p>
+            <ul>
+                <li>We'll learn about what's working for you, what you enjoy, and how to leverage that as much as possible. Fitness shouldn't feel like an intervention.</li>
+                <li>I'll suggest gradual changes to your routine-- I'm not here to shock your system; I want you to build muscle without it feeling like you've done anything radically different at all. I'll point our compass towards filling the gaps-- programming, exercise frequency, or recovery.</li>
+                <li>You'll get an individualized, adaptable program to actually build muscle.</li>
+                <li>Daily check-ins via text to keep you on track and answer questions in real time.</li>
+                <li>Weekly video calls to solidify fitness concepts and to understand how to actually enjoy your journey.</li>
             </ul>
-            <p style="margin-top: 2rem; font-size: 1.1rem; color: #666; font-weight: 300; line-height: 1.9;">You're not just paying for a program. You're paying for someone to show up every day for 90 days and care about your progress as much as you do.</p>
+            <p><strong>What you'll learn:</strong> How to structure your training, address any questions on form, and how to track your progress without it being a huge change to your life.</p>
         </div>
 
-        <div class="scarcity-notice">
-            Current Availability: 3 Spots | Next Cohort Starts January 2025
+        <div class="program-phase">
+            <h3>Month 2: Learning Momentum</h3>
+            <p><strong>Goal:</strong> Start seeing progress and remove doubts that you're on the right path.</p>
+            <ul>
+                <li>We'll continue to refine your program to maximize enjoyment and muscle balance.</li>
+                <li>Continued daily accountability.</li>
+                <li>Solidifying fitness concepts so that you understand why you're making the right moves for your growth, and how to apply them after the program concludes.</li>
+                <li>Nutrition guidance and other lifestyle tweaks. I'm not a dietitian, but I can help you get the most bang-for-buck and prioritize what matters.</li>
+            </ul>
+            <p><strong>What you'll learn:</strong> Exercise substitutions, how to approach new lifts on your own, and mind-muscle connection to achieve the feeling of being a "fitness person."</p>
         </div>
 
-        <div style="text-align: center; margin-top: 3rem;">
-            <a href="#apply" class="cta-button">Book Your Strategy Call</a>
+        <div class="program-phase">
+            <h3>Month 3: Mastering the Tools</h3>
+            <p><strong>Goal:</strong> Learn that you can drive progress for yourself, and how to navigate around future obstacles.</p>
+            <ul>
+                <li>You'll navigate around the setbacks that hit us all eventually-- time constraints, lack of motivation, and plateaus.</li>
+                <li>Continued daily support, weekly calls, and community check-ins.</li>
+                <li>Finalizing details about how you would craft your own workouts, inspire others in your circle, and become a leader of your health.</li>
+            </ul>
+            <p><strong>What you'll learn:</strong> The principles behind effective training and how to celebrate your body as it evolves over a lifetime.</p>
         </div>
+
+        <p class="section-intro">Let's work together.</p>
     </section>
 
-    <!-- Apply / Schedule Call -->
-    <section id="apply" class="fade-in-content" style="background: #fff; border-top: 1px solid #e8e8e8; border-bottom: 1px solid #e8e8e8; text-align: center;">
-        <h2>Let's Talk</h2>
-        <p class="section-intro">I'm offering a free 30-minute strategy call where we'll talk about where you are now, where you want to be, and whether this program is the right fit. No pressure, no sales pitch—just an honest conversation about your goals.<br><br>If it makes sense to work together, great. If not, I'll point you in the right direction anyway.</p>
-        
-        <div style="max-width: 900px; margin: 3rem auto;">
-            <div class="calendly-inline-widget" data-url="https://calendly.com/kev-kevinkoza/30min" style="min-width:320px;height:700px;"></div>
-            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-        </div>
+    <!-- About Me -->
+    <section class="fade-in-content" style="background: #fafafa;">
+        <h2>Who I Am</h2>
+        <p class="section-intro">I used to work as a software engineer before I decided to go full-time as a personal trainer, artist, and content creator. I believe that fitness doesn't need to be your entire life-- we can all find ways to balance our profession, passions, and our fitness. My background influences how I approach training-— do the right thing at the right time with a system in place, but don't put anything into a box. Body awareness and intuition has driven the majority of my consistency over fitness.</p>
+        <p class="section-intro">I've been lifting for a decade, following different splits, trying different systems. I tracked like crazy then I ignored it entirely. I've taken month-long breaks and had other periods where I'm in the gym daily.</p>
+        <p class="section-intro">Above all, I've learned that you have to learn strategies that _actually_ drive growth, but do what's enjoyable for you. I've been fortunate to share this system with those in my community and with clients through the internet. Trust yourself that you can learn that fitness becomes a thing that you want to do as a celebration of your right to move-- the chore becomes the reward.</p>
     </section>
 
-    <!-- Lead Magnet with ConvertKit Form -->
-    <section id="leadmagnet" class="lead-magnet fade-in-content">
-        <h2>Not Ready for Coaching? Start Here.</h2>
-        <p class="section-intro">I've distilled everything I teach my coaching clients into a 22-page training framework. It covers progressive overload, program design, recovery strategies, and how to actually build muscle long-term. No gimmicks, no "secrets"—just the principles that work.</p>
+    <!-- Free Lead Magnet -->
+    <section id="framework" class="lead-magnet fade-in-content">
+        <h2>Learn More For Free.</h2>
+        <p class="section-intro">I broke down many of the core concepts of my training philosophy and principles into a a 22-page document. If you're a self-starter and you want to learn more, feel free to grab the download and let me know if you have any questions.</p>
         
         <!-- ConvertKit Form -->
         <div style="max-width: 500px; margin: 3rem auto 0 auto;">
@@ -849,86 +604,21 @@
                         </div>
                         <button data-element="submit" class="formkit-submit formkit-submit" style="color: rgb(255, 255, 255); background-color: rgb(44, 44, 44); border-radius: 0px; font-weight: 400; text-transform: uppercase; letter-spacing: 2px; padding: 1rem 3rem; font-size: 0.95rem; width: 100%; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin-top: 1rem;">
                             <div class="formkit-spinner"><div></div><div></div><div></div></div>
-                            <span class="">Send Me The Framework</span>
+                            <span class="">Send The PDF</span>
                         </button>
                     </div>
                 </div>
             </form>
         </div>
         
-        <p class="lead-magnet-note">Plus occasional training insights. No spam.</p>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq" class="fade-in-content" style="background: #fff; border-top: 1px solid #e8e8e8; border-bottom: 1px solid #e8e8e8;">
-        <h2>Questions You Might Have</h2>
-        <div style="max-width: 700px; margin: 3rem auto;">
-            <div class="faq-item">
-                <button class="faq-question" onclick="toggleFaq(this)">
-                    <span>Is this actually worth $999?</span>
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>I think it depends on what you need. If you're self-motivated and just need a plan, you probably don't need coaching—grab the free framework below and run with it. But if you're someone who struggles with consistency, needs accountability, or has tried programs before and they haven't stuck, then yes, I think this is worth it. You're not just getting a program; you're getting someone who will show up every day for 90 days to help you build the habit and teach you the system.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question" onclick="toggleFaq(this)">
-                    <span>What if I can't commit to 90 days?</span>
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>Life happens. I get it. If you miss a workout, we adjust the program. If you can't make a call, we reschedule. The only thing I ask is that you're honest with me about what's going on. I can work with "I'm struggling this week" but not with ghosting. The program is flexible—you just need to show up as best as you can.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question" onclick="toggleFaq(this)">
-                    <span>Can I do this without a gym membership?</span>
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>If you have dumbbells, kettlebells, or resistance bands at home, we can make it work. But I'll be honest with you—having access to a gym gives us way more options and will lead to better results. Most gyms are $10-30 per month. Planet Fitness is literally $10. I think that's worth the investment if you're serious about this.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question" onclick="toggleFaq(this)">
-                    <span>What makes this different from other coaching?</span>
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>I think there are a few things. First, I approach training like a system, not like guesswork—probably because of my background in software engineering. Second, I'm focused on making the gym something you enjoy, not just tolerate. If you hate every workout, you'll quit eventually. And third, my explicit goal is to teach you to be independent. After 90 days, you shouldn't need me anymore. That's success.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question" onclick="toggleFaq(this)">
-                    <span>What if I don't see results?</span>
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>If you follow the program for 30 days—showing up to workouts, staying in touch, being honest about your nutrition—and you're not seeing any progress, I'll refund your first month. No argument. But I've never had someone follow through consistently and not see results. The principles work. It just requires showing up.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Full Testimonial -->
-    <section class="fade-in-content" style="background: #fafafa;">
-        <h2>What a Client Had to Say</h2>
-        <div class="testimonial-full">
-            <p>I opted to quit drinking and try to get my health better so that I could slide into my 70's being healthy. I'm in pretty good shape health-wise, so I just felt that I wanted to give that a go.</p>
-            <p>The internet is kind of a vast wasteland of people's opinions on what to do—you know, watching you and your fitness journey, I thought, "well, I'd reach out to you" and see what your thoughts were and that's what I did. You've been able to provide a good "menu" of exercises that I think are staples and I can pick and choose. I try to keep my five, at least a day, based on what time I have. I think it's real convenient and I've gotten used to them and not necessarily having to sit there and check them off—I know what I need to do.</p>
-            <p>It's been good. It's good having a cheerleader in a way— you know, that's what's one thing nice about a trainer, they're there to support you.</p>
-            <p>It feels good, you know. It makes me feel a lot more confident so that's a nice thing. And then, you know, going along with that, the stretching has been good. It definitely helped get the mobility—certainly I haven't done anything in a long time. Getting that mobility back is important.</p>
-            <p>I think the time we meet together has been good because we've been able to go over everything and pick out new things. Early on, being able to modify the workout program to what I was feeling and what you were sensing. That was good, I appreciate it, I like it. And you're easy to talk to—that's the nice thing. I think you could connect with a lot of people, especially since you're doing social media. To keep the flow going—I think you do that well.</p>
-            <p class="quote-author">— Tom</p>
-        </div>
+        <p class="lead-magnet-note">I'll send you occasional training tips and offers. Unsubscribe at any time.</p>
     </section>
 
     <!-- Final CTA -->
-    <section class="fade-in-content" style="text-align: center; background: #fff; border-top: 1px solid #e8e8e8; border-bottom: 1px solid #e8e8e8;">
-        <h2>Ready to Start?</h2>
-        <p class="section-intro">I have 3 spots open for the January 2025 cohort. Book a free 30-minute strategy call and we'll figure out if this is the right fit for you.</p>
-        <a href="#apply" class="cta-button">Book Your Strategy Call</a>
+    <section id="apply" class="fade-in-content" style="text-align: center; background: #fff; border-top: 1px solid #e8e8e8; border-bottom: 1px solid #e8e8e8;">
+        <h2>Book Your Discovery Call</h2>
+        <p class="section-intro">Let's discuss your fitness journey. I want to give you as much condensed advice as possible in 30 minutes, then we can see if there's alignment for coaching.</p>
+        <a href="https://calendly.com/your-link" class="cta-button">Book Your Strategy Call</a>
     </section>
 
     <!-- Footer -->
